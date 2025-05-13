@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Yu Zheng 郑誉 Website"
+title: "Welcome"
 author_profile: true
 redirect_from: 
   - /about/

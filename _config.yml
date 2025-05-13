@@ -10,7 +10,7 @@
 locale                   : "en-US"
 site_theme               : "default"
 title                    : "Yu Zheng | 郑誉"
-title_separator          : "-"
+title_separator          : "&#124;"
 name                     : &name "Zheng Yu"
 description              : &description "personal description"
 url                      : https://fateryu.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
@@ -24,7 +24,7 @@ author:
   # Biographic information
   avatar           : "profile-zhengyu.jpg"
   name             : "Yu Zheng"
-  pronouns         : "he/his" # example: "she/her"  
+  pronouns         : # example: "she/her"  
   bio              : "Master student"
   location         : "Guang Zhou"
   employer         : "Hunan University"
@@ -75,6 +75,7 @@ author:
   xing             : # Username
   youtube          : # Username
   zhihu            : # Username
+  bilibili         : 188667355 # uid
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
