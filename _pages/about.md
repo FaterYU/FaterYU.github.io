@@ -7,43 +7,59 @@ redirect_from:
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+👋
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+## Personal Profile
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+I am a Master student of Electronic Information at [School of Robotics](http://robotics.hnu.edu.cn/), [Hunan University (HNU)](http://www.hnu.edu.cn/), under the supervision of [Prof. Kailun Yang](https://yangkailun.com/). I obtained my B.S. degrees in Software Engineering from [South China Normal University (SCNU)](http://www.scnu.edu.cn/) and Computing Science from [University of Aberdeen (UoA)](https://www.abdn.ac.uk/), in 2025.
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-2. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-3. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-4. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-5. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-6. Check status by going to the repository settings, in the "GitHub pages" section
+I was one of the founders of [SCNU-VANGUARD](https://github.com/SCNU-Vanguard/) team, which is a RoboMaster team from SCNU in Foshan Campus. I was one of the founders of [SCNU-AutoBits](https://github.com/SCNUAutoPtr/), which is a technology development team from Aberdeen Institute, SCNU. I was also a member of [SCNU-PIONEER](https://scnu-pioneer.coding.net/public), which is a RoboMaster team from SCNU in Guangzhou Campus.
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+## Research Interests
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+- Computer Vision
+- Autonomous Driving
+- Robotics
+- Embodied AI
 
-**Markdown generator**
+## Education
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+- 2025.09 - now Master, School of Robotics, Hunan University (HNU), China
+- 2021.09 - 2025.06 Bachelor, Software Engineering, Aberdeen Data Science and Artificial Intelligence Institute, South China Normal University (SCNU), China
+- 2021.09 - 2025.06 Bachelor, Computing Science, Aberdeen Data Science and Artificial Intelligence Institute, University of Aberdeen (UoA), UK
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+## Internship
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
+- 2024.01 - 2024.02 Interface Development Intern, Dept. TEG, Tencent, China
+- 2022.06 - 2022.08 Assistant Tutor, Dept. RoboMaster, DJI, China
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+## Publications
+
+😇 Coming soon...
+
+## Patents
+
+- Entered Substantive Examination, A Study on Study-Abroad Application Recommendation Method and System Based on Natural Language Processing and Neural Networks, First author, CN117474726A
+
+## Projects
+
+- 2023.05 - 2024.10 "Sport Data Evaluation Technology Based on Human Pose Estimate and its application", China College Students Innovation and Entrepreneurship Project, Provincial completed project, First author
+
+## Competitions
+
+- 2024.04 RoboMaster University League Mech Master Competition Infantry Robot Award, National First Prize
+- 2023.05 RoboMaster University League Mech Master Competition Infantry Combat Award, National Second Prize
+- 2024.06 RoboMaster Super League Competition Infantry Robot Award, National Second Prize
+- 2024.06 RoboMaster Super League Competition Overall Competition, National Third Prize
+- 2023.05 MCM (Mathematical Contest in Modeling), Honorable Mention
+- 2023.01 APMCM (Asia-Pacific Mathematical Contest in Modeling), Third Prize
+- 2023.10 National Undergraduate Mathematical Contest in Modeling (Guangdong), Provincial Second Prize
+
+## Certificates
+
+- CCF Computer Software Competence Certification (CSP) - C++
+
+## Software Copyright
+
+- BodyBuddy sport communication system, Second author, 2024SR0553026
+- Beverage shop ordering and background management analysis system, Second author, 2024R11S0333708
