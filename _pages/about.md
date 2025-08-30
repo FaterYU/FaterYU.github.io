@@ -11,7 +11,7 @@ redirect_from:
 
 ## Personal Profile
 
-I am a Master student of Electronic Information at [School of Robotics](http://robotics.hnu.edu.cn/), [Hunan University (HNU)](http://www.hnu.edu.cn/), under the supervision of [Prof. Kailun Yang](https://yangkailun.com/). I obtained my B.S. degrees in Software Engineering from [South China Normal University (SCNU)](http://www.scnu.edu.cn/) and Computing Science from [University of Aberdeen (UoA)](https://www.abdn.ac.uk/), in 2025.
+I am a Master student of Electronic Information at [School of Robotics](http://robotics.hnu.edu.cn/), [Hunan University (HNU)](http://www.hnu.edu.cn/), under the Co-advising of [Prof. Kailun Yang](https://yangkailun.com/) and [Prof. Jiaming Zhang](https://jamycheung.github.io/). I obtained my B.S. degrees in Software Engineering from [South China Normal University (SCNU)](http://www.scnu.edu.cn/) and Computing Science from [University of Aberdeen (UoA)](https://www.abdn.ac.uk/), in 2025.
 
 I was one of the founders of [SCNU-VANGUARD](https://github.com/SCNU-Vanguard/) team, which is a RoboMaster team from SCNU in Foshan Campus. I was one of the founders of [SCNU-AutoBits](https://github.com/SCNUAutoPtr/), which is a technology development team from Aberdeen Institute, SCNU. I was also a member of [SCNU-PIONEER](https://scnu-pioneer.coding.net/public), which is a RoboMaster team from SCNU in Guangzhou Campus.
 
@@ -24,7 +24,7 @@ I was one of the founders of [SCNU-VANGUARD](https://github.com/SCNU-Vanguard/) 
 
 ## Education
 
-- 2025.09 - now Master, School of Robotics, Hunan University (HNU), China
+- 2025.09 - NOW.    Master, School of Robotics, Hunan University (HNU), China
 - 2021.09 - 2025.06 Bachelor, Software Engineering, Aberdeen Data Science and Artificial Intelligence Institute, South China Normal University (SCNU), China
 - 2021.09 - 2025.06 Bachelor, Computing Science, Aberdeen Data Science and Artificial Intelligence Institute, University of Aberdeen (UoA), UK
 
