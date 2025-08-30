@@ -13,7 +13,7 @@ redirect_from:
 
 I am a Master student of Electronic Information at [School of Robotics](http://robotics.hnu.edu.cn/), [Hunan University (HNU)](http://www.hnu.edu.cn/), under the Co-advising of [Prof. Kailun Yang](https://yangkailun.com/) and [Prof. Jiaming Zhang](https://jamycheung.github.io/). I obtained my B.S. degrees in Software Engineering from [South China Normal University (SCNU)](http://www.scnu.edu.cn/) and Computing Science from [University of Aberdeen (UoA)](https://www.abdn.ac.uk/), in 2025.
 
-I was one of the founders of [SCNU-VANGUARD](https://github.com/SCNU-Vanguard/) team, which is a RoboMaster team from SCNU in Foshan Campus. I was one of the founders of [SCNU-AutoBits](https://github.com/SCNUAutoPtr/), which is a technology development team from Aberdeen Institute, SCNU. I was also a member of [SCNU-PIONEER](https://scnu-pioneer.coding.net/public), which is a RoboMaster team from SCNU in Guangzhou Campus.
+I was one of the founders of [SCNU-VANGUARD](https://github.com/SCNU-Vanguard/) team, which is a RoboMaster team from SCNU in Foshan Campus. I was one of the founders of [SCNU-AutoBits](https://github.com/SCNUAutoPtr/), which is a technology development team from Aberdeen Institute, SCNU. I was also a member of [SCNU-PIONEER](https://github.com/SCNU-PIONEER/), which is a RoboMaster team from SCNU in Guangzhou Campus.
 
 ## Research Interests
 
