@@ -11,9 +11,7 @@ redirect_from:
 
 ## Personal Profile
 
-I am a Master student of Electronic Information at [School of Robotics](http://robotics.hnu.edu.cn/), [Hunan University (HNU)](http://www.hnu.edu.cn/), under the Co-advising of [Prof. Kailun Yang](https://yangkailun.com/) and [Prof. Jiaming Zhang](https://jamycheung.github.io/). I obtained my B.S. degrees in Software Engineering from [South China Normal University (SCNU)](http://www.scnu.edu.cn/) and Computing Science from [University of Aberdeen (UoA)](https://www.abdn.ac.uk/), in 2025.
-
-I was one of the founders of [SCNU-VANGUARD](https://github.com/SCNU-Vanguard/) team, which is a RoboMaster team from SCNU in Foshan Campus. I was one of the founders of [SCNU-AutoBits](https://github.com/SCNUAutoPtr/), which is a technology development team from Aberdeen Institute, SCNU. I was also a member of [SCNU-PIONEER](https://github.com/SCNU-PIONEER/), which is a RoboMaster team from SCNU in Guangzhou Campus.
+I am a Master student of Electronic Information at [School of Robotics](http://robotics.hnu.edu.cn/), [Hunan University (HNU)](http://www.hnu.edu.cn/), under the Co-advising of [Prof. Jiaming Zhang](https://jamycheung.github.io/) and [Prof. Kailun Yang](https://yangkailun.com/). I obtained my B.S. degrees in Software Engineering from [South China Normal University (SCNU)](http://www.scnu.edu.cn/) and Computing Science from [University of Aberdeen (UoA)](https://www.abdn.ac.uk/), in 2025.
 
 ## Research Interests
 
@@ -24,22 +22,22 @@ I was one of the founders of [SCNU-VANGUARD](https://github.com/SCNU-Vanguard/) 
 
 ## Education
 
-- 2025.09 - NOW.    Master, School of Robotics, Hunan University (HNU), China
-- 2021.09 - 2025.06 Bachelor, Software Engineering, Aberdeen Data Science and Artificial Intelligence Institute, South China Normal University (SCNU), China
-- 2021.09 - 2025.06 Bachelor, Computing Science, Aberdeen Data Science and Artificial Intelligence Institute, University of Aberdeen (UoA), UK
+- **2025.09 - NOW.**    Master, Electronic Information, School of Artificial Intelligence and Robotics, Hunan University (HNU), China
+- **2021.09 - 2025.06** Bachelor, Software Engineering, Aberdeen Data Science and Artificial Intelligence Institute, South China Normal University (SCNU), China
+- **2021.09 - 2025.06** Bachelor, Computing Science, Aberdeen Data Science and Artificial Intelligence Institute, University of Aberdeen (UoA), UK
+
+## Publications
+
+[**arxiv**] OccSTeP: Benchmarking 4D Occupancy Spatio-Temporal Persistence [[paper]](https://arxiv.org/abs/2512.15621) [[website]](https://insai-lab.github.io/OccSTeP.github.io/) [[code]](https://github.com/FaterYU/OccSTeP)
+
+## Patents
+
+- Entered Substantive Examination, A Study on Study-Abroad Application Recommendation Method and System Based on Natural Language Processing and Neural Networks, First author, CN117474726A
 
 ## Internship
 
 - 2024.01 - 2024.02 Interface Development Intern, Dept. TEG, Tencent, China
 - 2022.06 - 2022.08 Assistant Tutor, Dept. RoboMaster, DJI, China
-
-## Publications
-
-😇 Coming soon...
-
-## Patents
-
-- Entered Substantive Examination, A Study on Study-Abroad Application Recommendation Method and System Based on Natural Language Processing and Neural Networks, First author, CN117474726A
 
 ## Projects
 
@@ -58,8 +56,3 @@ I was one of the founders of [SCNU-VANGUARD](https://github.com/SCNU-Vanguard/) 
 ## Certificates
 
 - CCF Computer Software Competence Certification (CSP) - C++
-
-## Software Copyright
-
-- BodyBuddy sport communication system, Second author, 2024SR0553026
-- Beverage shop ordering and background management analysis system, Second author, 2024R11S0333708
