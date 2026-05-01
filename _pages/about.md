@@ -28,8 +28,9 @@ I am a Master student of Electronic Information at [School of Robotics](http://r
 
 ## Publications
 
-[**arxiv**] DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models [[paper]](https://arxiv.org/abs/2603.18048)
+[**ICML 2026 spotlight**] Position: Assistive Agents Need Accessibility Alignment
 
+[**arxiv**] DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models [[paper]](https://arxiv.org/abs/2603.18048)
 
 [**arxiv**] OccSTeP: Benchmarking 4D Occupancy Spatio-Temporal Persistence [[paper]](https://arxiv.org/abs/2512.15621) [[website]](https://insai-lab.github.io/OccSTeP.github.io/) [[code]](https://github.com/FaterYU/OccSTeP)
 
