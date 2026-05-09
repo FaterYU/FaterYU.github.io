@@ -15,6 +15,8 @@ I am a Master student of Electronic Information at [School of Robotics](http://r
 
 ## Research Interests
 
+**Toward World Model with Representation Learning!**
+
 - Computer Vision
 - Autonomous Driving
 - Robotics
@@ -22,9 +24,9 @@ I am a Master student of Electronic Information at [School of Robotics](http://r
 
 ## Education
 
-- **2025.09 - NOW.**    Master, Electronic Information, School of Artificial Intelligence and Robotics, Hunan University (HNU), China
-- **2021.09 - 2025.06** Bachelor, Software Engineering, Aberdeen Data Science and Artificial Intelligence Institute, South China Normal University (SCNU), China
-- **2021.09 - 2025.06** Bachelor, Computing Science, Aberdeen Data Science and Artificial Intelligence Institute, University of Aberdeen (UoA), UK
+- **2025 - NOW.**    Master, Electronic Information, School of Artificial Intelligence and Robotics, Hunan University (HNU), China
+- **2021 - 2025** Bachelor, Software Engineering, Aberdeen Data Science and Artificial Intelligence Institute, South China Normal University (SCNU), China
+- **2021 - 2025** Bachelor, Computing Science, Aberdeen Data Science and Artificial Intelligence Institute, University of Aberdeen (UoA), UK
 
 ## Publications
 
@@ -40,22 +42,23 @@ I am a Master student of Electronic Information at [School of Robotics](http://r
 
 ## Internship
 
-- 2024.01 - 2024.02 Interface Development Intern, Dept. TEG, Tencent, China
-- 2022.06 - 2022.08 Assistant Tutor, Dept. RoboMaster, DJI, China
+- 2025 Research Intern, Dept. PAIR, PolyU, Hong Kong, China
+- 2024 Interface Development Intern, Dept. TEG, Tencent, Shenzhen, China
+- 2022 Assistant Tutor, Dept. RoboMaster, DJI, Shenzhen, China
 
 ## Projects
 
-- 2023.05 - 2024.10 "Sport Data Evaluation Technology Based on Human Pose Estimate and its application", China College Students Innovation and Entrepreneurship Project, Provincial completed project, First author
+- 2023 - 2024 "Sport Data Evaluation Technology Based on Human Pose Estimate and its application", China College Students Innovation and Entrepreneurship Project, Provincial completed project, First author
 
 ## Competitions
 
-- 2024.04 RoboMaster University League Mech Master Competition Infantry Robot Award, National First Prize
-- 2023.05 RoboMaster University League Mech Master Competition Infantry Combat Award, National Second Prize
-- 2024.06 RoboMaster Super League Competition Infantry Robot Award, National Second Prize
-- 2024.06 RoboMaster Super League Competition Overall Competition, National Third Prize
-- 2023.05 MCM (Mathematical Contest in Modeling), Honorable Mention
-- 2023.01 APMCM (Asia-Pacific Mathematical Contest in Modeling), Third Prize
-- 2023.10 National Undergraduate Mathematical Contest in Modeling (Guangdong), Provincial Second Prize
+- 2024 RoboMaster University League Mech Master Competition Infantry Robot Award, National First Prize
+- 2023 RoboMaster University League Mech Master Competition Infantry Combat Award, National Second Prize
+- 2024 RoboMaster Super League Competition Infantry Robot Award, National Second Prize
+- 2024 RoboMaster Super League Competition Overall Competition, National Third Prize
+- 2023 MCM (Mathematical Contest in Modeling), Honorable Mention
+- 2023 APMCM (Asia-Pacific Mathematical Contest in Modeling), Third Prize
+- 2023 National Undergraduate Mathematical Contest in Modeling (Guangdong), Provincial Second Prize
 
 ## Certificates
 
