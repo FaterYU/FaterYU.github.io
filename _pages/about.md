@@ -15,10 +15,10 @@ I am a Master student of Electronic Information at [School of Robotics](http://r
 
 ## Research Interests
 
-**Toward World Model with Representation Learning!**
+**Toward World Model!**
 
 - Computer Vision
-- Autonomous Driving
+- Representation Learning
 - Robotics
 - Embodied AI
 
