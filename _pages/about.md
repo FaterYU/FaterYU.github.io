@@ -11,7 +11,7 @@ redirect_from:
 
 ## Personal Profile
 
-I am a Master student of Electronic Information at [School of Robotics](http://robotics.hnu.edu.cn/), [Hunan University (HNU)](http://www.hnu.edu.cn/), under the Co-advising of [Prof. Jiaming Zhang](https://jamycheung.github.io/) and [Prof. Kailun Yang](https://yangkailun.com/). I obtained my B.S. degrees in Software Engineering from [South China Normal University (SCNU)](http://www.scnu.edu.cn/) and Computing Science from [University of Aberdeen (UoA)](https://www.abdn.ac.uk/), in 2025.
+I am a Master student of Electronic Information at School of Artificial Intelligence and Robotics, [Hunan University (HNU)](http://www.hnu.edu.cn/), under the Co-advising of [Prof. Jiaming Zhang](https://jamycheung.github.io/) and [Prof. Kailun Yang](https://yangkailun.com/). I obtained my B.S. degrees in Software Engineering from [South China Normal University (SCNU)](http://www.scnu.edu.cn/) and Computing Science from [University of Aberdeen (UoA)](https://www.abdn.ac.uk/), in 2025.
 
 ## Research Interests
 
