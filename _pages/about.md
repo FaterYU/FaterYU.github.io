@@ -30,7 +30,7 @@ I am a Master student of Electronic Information at [School of Robotics](http://r
 
 ## Publications
 
-[**ICML 2026 spotlight**] Position: Assistive Agents Need Accessibility Alignment
+[**ICML 2026 spotlight**] Position: Assistive Agents Need Accessibility Alignment [[paper]](https://arxiv.org/abs/2605.13579)
 
 [**arxiv**] DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models [[paper]](https://arxiv.org/abs/2603.18048)
 
