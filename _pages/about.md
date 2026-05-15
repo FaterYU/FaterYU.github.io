@@ -24,9 +24,9 @@ I am a Master student of Electronic Information at School of Artificial Intellig
 
 ## Education
 
-- **2025 - NOW.**    Master, Electronic Information, School of Artificial Intelligence and Robotics, Hunan University (HNU), China
-- **2021 - 2025** Bachelor, Software Engineering, Aberdeen Data Science and Artificial Intelligence Institute, South China Normal University (SCNU), China
-- **2021 - 2025** Bachelor, Computing Science, Aberdeen Data Science and Artificial Intelligence Institute, University of Aberdeen (UoA), UK
+- **2025 - NOW.**    Master, Electronic Information, Hunan University (HNU), China
+- **2021 - 2025** Bachelor, Software Engineering, South China Normal University (SCNU), China
+- **2021 - 2025** Bachelor, Computing Science, University of Aberdeen (UoA), UK
 
 ## Publications
 
@@ -42,13 +42,13 @@ I am a Master student of Electronic Information at School of Artificial Intellig
 
 ## Internship
 
-- 2025 Research Intern, Dept. PAIR, PolyU, Hong Kong, China
-- 2024 Interface Development Intern, Dept. TEG, Tencent, Shenzhen, China
-- 2022 Assistant Tutor, Dept. RoboMaster, DJI, Shenzhen, China
+- Research Intern, Dept. PAIR, PolyU, Hong Kong, China
+- Interface Development Intern, Dept. TEG, Tencent, Shenzhen, China
+- Assistant Tutor, Dept. RoboMaster, DJI, Shenzhen, China
 
 ## Projects
 
-- 2023 - 2024 "Sport Data Evaluation Technology Based on Human Pose Estimate and its application", China College Students Innovation and Entrepreneurship Project, Provincial completed project, First author
+- "Sport Data Evaluation Technology Based on Human Pose Estimate and its application", China College Students Innovation and Entrepreneurship Project, Provincial completed project, First author
 
 ## Competitions
 
@@ -60,6 +60,6 @@ I am a Master student of Electronic Information at School of Artificial Intellig
 - 2023 APMCM (Asia-Pacific Mathematical Contest in Modeling), Third Prize
 - 2023 National Undergraduate Mathematical Contest in Modeling (Guangdong), Provincial Second Prize
 
-## Certificates
+## Professional activities
 
-- CCF Computer Software Competence Certification (CSP) - C++
+Conference Reviewer for IROS, and Journal Reviewer for RAL.
