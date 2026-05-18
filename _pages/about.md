@@ -40,6 +40,12 @@ I am a Master student of Electronic Information at School of Artificial Intellig
 
 - Entered Substantive Examination, A Study on Study-Abroad Application Recommendation Method and System Based on Natural Language Processing and Neural Networks, First author, CN117474726A
 
+## Professional activities
+
+Conference Reviewer for IROS, and Journal Reviewer for RAL.
+
+[**UbiComp 2026 Workshop Organizer**] Assistive Agents for All [[website]](https://insailab.org/ubicomp2026-aaa-workshop/)
+
 ## Internship
 
 - Research Intern, Dept. PAIR, PolyU, Hong Kong, China
@@ -60,6 +66,3 @@ I am a Master student of Electronic Information at School of Artificial Intellig
 - 2023 APMCM (Asia-Pacific Mathematical Contest in Modeling), Third Prize
 - 2023 National Undergraduate Mathematical Contest in Modeling (Guangdong), Provincial Second Prize
 
-## Professional activities
-
-Conference Reviewer for IROS, and Journal Reviewer for RAL.
