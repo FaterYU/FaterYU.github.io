@@ -1,0 +1,126 @@
+research_interests:
+  - Computer Vision
+  - Representation Learning
+  - Robotics
+  - Embodied AI
+  - World Models
+  - Multimodal Agents
+
+publications:
+  - venue: "ICML 2026 · Spotlight"
+    title: "Position: Assistive Agents Need Accessibility Alignment"
+    description: "A position paper on aligning assistive agents with accessibility needs, human context, and real-world deployment constraints."
+    page_description: "Assistive agents should be evaluated and aligned around accessibility needs rather than generic task completion alone."
+    image: "/images/publications/assistive-agents-alignment.png"
+    image_alt: "Task-centric taxonomy of blind assistance and assistive task distribution"
+    featured: true
+    links:
+      - label: "Paper"
+        url: "https://arxiv.org/abs/2605.13579"
+  - venue: "arXiv"
+    title: "DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models"
+    description: "A diagnostic benchmark for evaluating whether audio language models preserve acoustic evidence faithfully."
+    page_description: "A benchmark for diagnosing whether audio language models ground their answers in faithful acoustic evidence."
+    image: "/images/publications/deaf-overview.png"
+    image_alt: "Overview of the DEAF acoustic faithfulness benchmark framework"
+    links:
+      - label: "Paper"
+        url: "https://arxiv.org/abs/2603.18048"
+  - venue: "arXiv"
+    title: "OccSTeP: Benchmarking 4D Occupancy Spatio-Temporal Persistence"
+    description: "A benchmark for studying how occupancy representations persist across space and time in dynamic 4D scenes."
+    page_description: "A benchmark for evaluating how 4D occupancy methods preserve spatio-temporal consistency in dynamic scenes."
+    image: "/images/publications/occstep-overview.png"
+    image_alt: "Overview figure for OccSTeP spatio-temporal persistence benchmark"
+    links:
+      - label: "Paper"
+        url: "https://arxiv.org/abs/2512.15621"
+      - label: "Website"
+        url: "https://insai-lab.github.io/OccSTeP.github.io/"
+      - label: "Code"
+        url: "https://github.com/FaterYU/OccSTeP"
+
+education:
+  - period: "2025 - Now"
+    title: "M.S. in Electronic Information, Hunan University"
+    detail: "School of Artificial Intelligence and Robotics, China."
+  - period: "2021 - 2025"
+    title: "B.S. in Software Engineering, South China Normal University"
+    detail: "Guangzhou, China."
+  - period: "2021 - 2025"
+    title: "B.S. in Computing Science, University of Aberdeen"
+    detail: "Aberdeen, United Kingdom."
+
+professional_activities:
+  meta: "Academic Service"
+  title: "Reviewer and workshop organizer"
+  items:
+    - "Conference reviewer for IROS."
+    - "Journal reviewer for RAL."
+    - "Organizer of the UbiComp 2026 workshop [Assistive Agents for All](https://insailab.org/ubicomp2026-aaa-workshop/)."
+
+internships:
+  meta: "Industry and Research"
+  title: "Internship experience"
+  items:
+    - "Research Intern, Dept. PAIR, PolyU, Hong Kong, China."
+    - "Interface Development Intern, Dept. TEG, Tencent, Shenzhen, China."
+    - "Assistant Tutor, Dept. RoboMaster, DJI, Shenzhen, China."
+
+projects_and_patents:
+  meta: "Research Translation"
+  title: "Projects and patent"
+  items:
+    - "First author, China College Students Innovation and Entrepreneurship Project on sport data evaluation based on human pose estimation."
+    - "First author, patent CN117474726A on NLP and neural-network-based study-abroad application recommendation, entered substantive examination."
+
+awards:
+  - year: "2024"
+    title: "RoboMaster University League Mech Master Competition"
+    detail: "Infantry Robot Award"
+    rank: "National First Prize"
+  - year: "2024"
+    title: "RoboMaster Super League Competition"
+    detail: "Infantry Robot Award"
+    rank: "National Second Prize"
+  - year: "2024"
+    title: "RoboMaster Super League"
+    detail: "Overall Competition"
+    rank: "National Third Prize"
+  - year: "2023"
+    title: "RoboMaster University League Mech Master Competition"
+    detail: "Infantry Combat Award"
+    rank: "National Second Prize"
+  - year: "2023"
+    title: "MCM"
+    detail: "Mathematical Contest in Modeling"
+    rank: "Honorable Mention"
+  - year: "2023"
+    title: "APMCM"
+    detail: "Asia-Pacific Mathematical Contest in Modeling"
+    rank: "Third Prize"
+  - year: "2023"
+    title: "National Undergraduate Mathematical Contest in Modeling"
+    detail: "Guangdong Division"
+    rank: "Provincial Second Prize"
+
+projects:
+  - meta: "Benchmark · 4D Occupancy"
+    title: "OccSTeP"
+    description: "A benchmark for evaluating spatio-temporal persistence in 4D occupancy prediction, with a focus on long-horizon consistency in dynamic scenes."
+    links:
+      - label: "Website"
+        url: "https://insai-lab.github.io/OccSTeP.github.io/"
+      - label: "Code"
+        url: "https://github.com/FaterYU/OccSTeP"
+      - label: "Paper"
+        url: "https://arxiv.org/abs/2512.15621"
+  - meta: "Innovation Project · First Author"
+    title: "Sport Data Evaluation Based on Human Pose Estimation"
+    description: "A China College Students Innovation and Entrepreneurship project applying human pose estimation to sports data evaluation and feedback."
+  - meta: "Robotics · RoboMaster"
+    title: "Infantry Robot Systems"
+    description: "Engineering work for RoboMaster competitions, contributing to award-winning infantry robot performance in university league and super league events."
+  - meta: "Patent · First Author"
+    title: "Study-Abroad Application Recommendation System"
+    description: "A recommendation method and system based on natural language processing and neural networks, currently entered substantive examination as CN117474726A."

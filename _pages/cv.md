@@ -1,64 +1,55 @@
 ---
-layout: archive
+layout: single
 title: "CV"
+description: "Curriculum vitae of Yu Zheng."
 permalink: /cv/
 author_profile: true
+hide_title: true
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+<section class="profile-page-heading">
+  <p class="profile-kicker">Curriculum Vitae</p>
+  <h1>Yu Zheng</h1>
+  <p>Master's student in Electronic Information at Hunan University, working on computer vision, robotics, embodied AI, and world models.</p>
+</section>
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+## Education
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+- **2025 - Now** · M.S. in Electronic Information, Hunan University, China
+- **2021 - 2025** · B.S. in Software Engineering, South China Normal University, China
+- **2021 - 2025** · B.S. in Computing Science, University of Aberdeen, United Kingdom
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+## Publications
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+- **ICML 2026 Spotlight** · Position: Assistive Agents Need Accessibility Alignment. [[paper]](https://arxiv.org/abs/2605.13579)
+- **arXiv** · DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models. [[paper]](https://arxiv.org/abs/2603.18048)
+- **arXiv** · OccSTeP: Benchmarking 4D Occupancy Spatio-Temporal Persistence. [[paper]](https://arxiv.org/abs/2512.15621) [[website]](https://insai-lab.github.io/OccSTeP.github.io/) [[code]](https://github.com/FaterYU/OccSTeP)
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+## Professional Activities
+
+- Conference reviewer for IROS.
+- Journal reviewer for RAL.
+- Workshop organizer, **Assistive Agents for All**, UbiComp 2026. [[website]](https://insailab.org/ubicomp2026-aaa-workshop/)
+
+## Internship
+
+- Research Intern, Dept. PAIR, PolyU, Hong Kong, China
+- Interface Development Intern, Dept. TEG, Tencent, Shenzhen, China
+- Assistant Tutor, Dept. RoboMaster, DJI, Shenzhen, China
+
+## Projects and Patents
+
+- **Sport Data Evaluation Technology Based on Human Pose Estimation and its Application** · China College Students Innovation and Entrepreneurship Project, provincial completed project, first author.
+- **A Study on Study-Abroad Application Recommendation Method and System Based on Natural Language Processing and Neural Networks** · First author, CN117474726A, entered substantive examination.
+
+## Competitions
+
+- 2024 RoboMaster University League Mech Master Competition Infantry Robot Award, National First Prize
+- 2023 RoboMaster University League Mech Master Competition Infantry Combat Award, National Second Prize
+- 2024 RoboMaster Super League Competition Infantry Robot Award, National Second Prize
+- 2024 RoboMaster Super League Competition Overall Competition, National Third Prize
+- 2023 MCM, Honorable Mention
+- 2023 APMCM, Third Prize
+- 2023 National Undergraduate Mathematical Contest in Modeling, Guangdong Provincial Second Prize

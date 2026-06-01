@@ -162,10 +162,13 @@
       {% if author.bilibili %}
       <li><a href="https://space.bilibili.com/{{ author.bilibili }}"><i class="fab fa-fw fa-bilibili icon-pad-right" aria-hidden="true"></i>bilibili</a></li>
       {% endif %}
+      {% if author.xiaohongshu %}
+      <li><a href="{{ author.xiaohongshu }}"><i class="fas fa-fw fa-book-open icon-pad-right" aria-hidden="true"></i>RedNote</a></li>
+      {% endif %}
     </ul>
   </div>
 </div>
 
-<div style="width: 50px height: 50px">
+<div class="author__visitor-map" aria-label="Visitor map">
   <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=5rndF5irS4xf7El7OaxC3kuAGnZYl8O04rJjQ4MS-U8"></script>
 </div>

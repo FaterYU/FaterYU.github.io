@@ -262,3 +262,27 @@
     }
   }
 }
+
+.author__visitor-map {
+  width: 175px;
+  max-width: 175px;
+  margin-top: 1rem;
+  overflow: hidden;
+
+  @include breakpoint($large) {
+    margin-top: 1.15rem;
+  }
+
+  iframe,
+  canvas,
+  img {
+    max-width: 100% !important;
+  }
+
+  iframe,
+  canvas {
+    display: block;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}

@@ -12,7 +12,7 @@ site_theme               : "default"
 title                    : "Yu Zheng | 郑誉"
 title_separator          : "&#124;"
 name                     : &name "Zheng Yu"
-description              : &description "personal description"
+description              : &description "Yu Zheng is a master's student at Hunan University working on computer vision, robotics, embodied AI, and world models."
 url                      : https://fateryu.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "fateryu/fateryu.github.io"
@@ -25,10 +25,10 @@ author:
   avatar           : "profile-zhengyu.jpg"
   name             : "Yu Zheng"
   pronouns         : # example: "she/her"  
-  bio              : "Master student"
-  location         : "Guang Zhou"
+  bio              : "Master student · Computer Vision & Robotics"
+  location         : "Guangzhou, China"
   employer         : "Hunan University"
-  URI              : "https://fater.top" # URL
+  uri              : "https://fater.top" # URL
   email            : "defateyz@gmail.com" 
 
   # Academic websites
@@ -76,6 +76,7 @@ author:
   youtube          : # Username
   zhihu            : # Username
   bilibili         : 188667355 # uid
+  xiaohongshu      : "https://www.xiaohongshu.com/user/profile/5eb03c310000000001004e22"
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
@@ -90,7 +91,7 @@ publication_category:
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
-future                   : true
+future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
@@ -120,7 +121,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true      # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
 
@@ -167,6 +168,7 @@ exclude:
   - .github
   - .jekyll-assets-cache
   - .sass-cache
+  - CONTRIBUTING.md
   - assets/js/_main.js
   - assets/js/plugins
   - assets/js/vendor
@@ -174,16 +176,25 @@ exclude:
   - Capfile
   - config
   - Dockerfile
+  - docker-compose.yaml
+  - files
   - Gemfile
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
   - local
   - log
+  - markdown_generator
   - node_modules
   - package.json*
   - Rakefile
   - README
+  - README.md
+  - scripts
+  - talkmap
+  - talkmap.py
+  - talkmap.ipynb
+  - talkmap_out.ipynb
   - tmp
   - vendor
 keep_files:

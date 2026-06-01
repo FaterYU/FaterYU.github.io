@@ -1,0 +1,19 @@
+<article class="profile-publication{% if publication.featured %} profile-publication--featured{% endif %}">
+  {% if publication.image %}
+    <figure class="profile-publication__media">
+      <img src="{{ publication.image | relative_url }}" alt="{{ publication.image_alt | default: publication.title }}">
+    </figure>
+  {% endif %}
+  <div class="profile-publication__body">
+    {% if publication.venue %}<p class="profile-publication__meta">{{ publication.venue }}</p>{% endif %}
+    <{{ include.heading | default: "h3" }}>{{ publication.title }}</{{ include.heading | default: "h3" }}>
+    <p>{{ include.description | default: publication.description }}</p>
+    {% if publication.links %}
+      <div class="profile-link-row">
+        {% for link in publication.links %}
+          <a href="{{ link.url }}">{{ link.label }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</article>

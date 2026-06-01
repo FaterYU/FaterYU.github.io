@@ -1,14 +1,37 @@
 ---
-layout: archive
-title: "Portfolio"
-permalink: /portfolio/
+layout: single
+title: "Projects"
+description: "Selected projects by Yu Zheng."
+permalink: /projects/
 author_profile: true
+hide_title: true
+redirect_from:
+  - /portfolio/
 ---
 
-{% include base_path %}
+{% assign profile = site.data.profile %}
 
+<section class="profile-page-heading">
+  <p class="profile-kicker">Projects</p>
+  <h1>Research and engineering projects</h1>
+  <p>Selected work across 4D scene understanding, human pose analysis, robotics competitions, and applied AI systems.</p>
+</section>
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
-
+<section class="profile-section profile-section--compact">
+  <div class="profile-card-grid profile-card-grid--wide">
+    {% for project in profile.projects %}
+      <article class="profile-card">
+        <p class="profile-card__meta">{{ project.meta }}</p>
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.description }}</p>
+        {% if project.links %}
+          <div class="profile-link-row">
+            {% for link in project.links %}
+              <a href="{{ link.url }}">{{ link.label }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+</section>

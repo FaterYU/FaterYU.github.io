@@ -51,4 +51,11 @@ html[data-theme="dark"] {
     --global-text-color                 : #{$text};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$background-lighter};
+    --profile-surface-color             : #2b2d30;
+    --profile-muted-surface-color       : #243633;
+    --profile-card-bg-color             : #373a3d;
+    --profile-accent-color              : #5eead4;
+    --profile-accent-color-strong       : #99f6e4;
+    --profile-accent-color-alt          : #fb7185;
+    --profile-border-color              : #555f5d;
 }

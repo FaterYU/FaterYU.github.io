@@ -1,68 +1,117 @@
 ---
 permalink: /
-title: "Profile"
+title: "Home"
+description: "Yu Zheng is a master's student at Hunan University working on computer vision, robotics, embodied AI, and world models."
 author_profile: true
+hide_title: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-👋 Welcome
+{% assign profile = site.data.profile %}
 
-## Personal Profile
+<section class="profile-hero">
+  <p class="profile-eyebrow">Master student · Hunan University</p>
+  <h1>Yu Zheng <span>郑誉</span></h1>
+  <p class="profile-lede">I am a master's student in Electronic Information at the School of Artificial Intelligence and Robotics, Hunan University, co-advised by <a href="https://jamycheung.github.io/">Prof. Jiaming Zhang</a> and <a href="https://yangkailun.com/">Prof. Kailun Yang</a>. My research interests sit at the intersection of computer vision, representation learning, robotics, and embodied AI.</p>
+  <div class="profile-actions">
+    <a class="btn btn--primary" href="/publications/">Publications</a>
+    <a class="btn btn--inverse" href="/projects/">Projects</a>
+    <a class="btn btn--inverse" href="mailto:defateyz@gmail.com">Email</a>
+  </div>
+</section>
 
-I am a Master student of Electronic Information at School of Artificial Intelligence and Robotics, [Hunan University (HNU)](http://www.hnu.edu.cn/), under the Co-advising of [Prof. Jiaming Zhang](https://jamycheung.github.io/) and [Prof. Kailun Yang](https://yangkailun.com/). I obtained my B.S. degrees in Software Engineering from [South China Normal University (SCNU)](http://www.scnu.edu.cn/) and Computing Science from [University of Aberdeen (UoA)](https://www.abdn.ac.uk/), in 2025.
+<section class="profile-section">
+  <h2 class="profile-section-title">Research Interests</h2>
+  <div class="profile-chip-grid" aria-label="Research interests">
+    {% for interest in profile.research_interests %}
+      <span>{{ interest }}</span>
+    {% endfor %}
+  </div>
+</section>
 
-## Research Interests
+<section class="profile-section">
+  <h2 class="profile-section-title">Publications</h2>
+  <div class="profile-publication-list">
+    {% for publication in profile.publications limit: 3 %}
+      {% include profile-publication-card.html publication=publication heading="h3" description=publication.description %}
+    {% endfor %}
+  </div>
+  <p class="profile-more"><a href="/publications/">View all publications</a></p>
+</section>
 
-**Toward World Model!**
+<section class="profile-section">
+  <h2 class="profile-section-title">Education</h2>
+  <ol class="profile-timeline">
+    {% for item in profile.education %}
+      <li>
+        <span>{{ item.period }}</span>
+        <strong>{{ item.title }}</strong>
+        <p>{{ item.detail }}</p>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
 
-- Computer Vision
-- Representation Learning
-- Robotics
-- Embodied AI
+<section class="profile-section">
+  <h2 class="profile-section-title">Professional Activities</h2>
+  {% assign activity = profile.professional_activities %}
+  <article class="profile-card">
+    <p class="profile-card__meta">{{ activity.meta }}</p>
+    <h3>{{ activity.title }}</h3>
+    <ul>
+      {% for item in activity.items %}
+        <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+      {% endfor %}
+    </ul>
+  </article>
+</section>
 
-## Education
+<section class="profile-section">
+  <h2 class="profile-section-title">Internship</h2>
+  {% assign internship = profile.internships %}
+  <article class="profile-card">
+    <p class="profile-card__meta">{{ internship.meta }}</p>
+    <h3>{{ internship.title }}</h3>
+    <ul>
+      {% for item in internship.items %}
+        <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+      {% endfor %}
+    </ul>
+  </article>
+</section>
 
-- **2025 - NOW.**    Master, Electronic Information, Hunan University (HNU), China
-- **2021 - 2025** Bachelor, Software Engineering, South China Normal University (SCNU), China
-- **2021 - 2025** Bachelor, Computing Science, University of Aberdeen (UoA), UK
+<section class="profile-section">
+  <h2 class="profile-section-title">Projects and Patents</h2>
+  {% assign project_group = profile.projects_and_patents %}
+  <article class="profile-card">
+    <p class="profile-card__meta">{{ project_group.meta }}</p>
+    <h3>{{ project_group.title }}</h3>
+    <ul>
+      {% for item in project_group.items %}
+        <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+      {% endfor %}
+    </ul>
+  </article>
+</section>
 
-## Publications
-
-[**ICML 2026 spotlight**] Position: Assistive Agents Need Accessibility Alignment [[paper]](https://arxiv.org/abs/2605.13579)
-
-[**arxiv**] DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models [[paper]](https://arxiv.org/abs/2603.18048)
-
-[**arxiv**] OccSTeP: Benchmarking 4D Occupancy Spatio-Temporal Persistence [[paper]](https://arxiv.org/abs/2512.15621) [[website]](https://insai-lab.github.io/OccSTeP.github.io/) [[code]](https://github.com/FaterYU/OccSTeP)
-
-## Patents
-
-- Entered Substantive Examination, A Study on Study-Abroad Application Recommendation Method and System Based on Natural Language Processing and Neural Networks, First author, CN117474726A
-
-## Professional activities
-
-Conference Reviewer for IROS, and Journal Reviewer for RAL.
-
-[**UbiComp 2026 Workshop Organizer**] Assistive Agents for All [[website]](https://insailab.org/ubicomp2026-aaa-workshop/)
-
-## Internship
-
-- Research Intern, Dept. PAIR, PolyU, Hong Kong, China
-- Interface Development Intern, Dept. TEG, Tencent, Shenzhen, China
-- Assistant Tutor, Dept. RoboMaster, DJI, Shenzhen, China
-
-## Projects
-
-- "Sport Data Evaluation Technology Based on Human Pose Estimate and its application", China College Students Innovation and Entrepreneurship Project, Provincial completed project, First author
-
-## Competitions
-
-- 2024 RoboMaster University League Mech Master Competition Infantry Robot Award, National First Prize
-- 2023 RoboMaster University League Mech Master Competition Infantry Combat Award, National Second Prize
-- 2024 RoboMaster Super League Competition Infantry Robot Award, National Second Prize
-- 2024 RoboMaster Super League Competition Overall Competition, National Third Prize
-- 2023 MCM (Mathematical Contest in Modeling), Honorable Mention
-- 2023 APMCM (Asia-Pacific Mathematical Contest in Modeling), Third Prize
-- 2023 National Undergraduate Mathematical Contest in Modeling (Guangdong), Provincial Second Prize
-
+<section class="profile-section">
+  <h2 class="profile-section-title">Awards</h2>
+  <article class="profile-card profile-card--awards">
+    <p class="profile-card__meta">Competitions and Honors</p>
+    <h3>Selected awards</h3>
+    <div class="profile-award-list">
+      {% for award in profile.awards %}
+        <div class="profile-award-item">
+          <span class="profile-award-year">{{ award.year }}</span>
+          <div class="profile-award-title">
+            <strong>{{ award.title }}</strong>
+            <p>{{ award.detail }}</p>
+          </div>
+          <span class="profile-award-rank">{{ award.rank }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </article>
+</section>
