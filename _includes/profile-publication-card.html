@@ -1,4 +1,4 @@
-<article class="profile-publication{% if publication.featured %} profile-publication--featured{% endif %}">
+<article class="profile-publication{% if include.compact %} profile-publication--compact{% endif %}{% if publication.featured %} profile-publication--featured{% endif %}">
   {% if publication.image %}
     <figure class="profile-publication__media">
       <img src="{{ publication.image | relative_url }}" alt="{{ publication.image_alt | default: publication.title }}">
