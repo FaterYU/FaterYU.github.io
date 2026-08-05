@@ -355,6 +355,26 @@
   min-width: 0;
 }
 
+.profile-publication__authors {
+  margin: 0.25rem 0 0;
+  color: var(--global-text-color);
+  font-size: $type-size-6;
+  line-height: 1.5;
+
+  strong {
+    color: var(--profile-accent-color-strong);
+    font-weight: 800;
+  }
+
+  sup {
+    position: relative;
+    top: -0.2em;
+    color: var(--profile-accent-color);
+    font-size: 0.78em;
+    font-weight: 800;
+  }
+}
+
 .profile-card {
   padding-left: 1.35rem;
 

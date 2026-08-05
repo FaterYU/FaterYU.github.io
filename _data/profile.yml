@@ -7,8 +7,36 @@ research_interests:
   - Multimodal Agents
 
 publications:
+  - venue: "arXiv 2026"
+    title: "Beyond Gene Reconstruction: Learning Cell Representations through Complementary Transcriptomic Views"
+    authors:
+      - name: "Jiaqi Xiong"
+        equal: true
+      - name: "Yuntao Hu"
+        equal: true
+      - name: "Yu Zheng"
+        highlight: true
+      - name: "Yifei Shi"
+      - name: "Xinyue Guo"
+      - name: "Jiaxin Qi"
+        corresponding: true
+    description: "A contrastive pretraining framework for single-cell transcriptomes that learns transferable whole-cell representations from complementary gene-expression views."
+    page_description: "CoCoS learns cell representations beyond masked gene reconstruction through co-expression-guided views, expression-aware contrast sets, and competence-gated contrastive onset."
+    image: "/images/publications/cocos-overview.png"
+    image_alt: "Overview of the CoCoS-GPC cell representation learning framework"
+    links:
+      - label: "Paper"
+        url: "https://arxiv.org/abs/2608.00985"
   - venue: "ICML 2026 · Spotlight"
     title: "Position: Assistive Agents Need Accessibility Alignment"
+    authors:
+      - name: "Jie Hu"
+      - name: "Changyuan Yan"
+      - name: "Yu Zheng"
+        highlight: true
+      - name: "Ziqian Wang"
+      - name: "Jiaming Zhang"
+        corresponding: true
     description: "A position paper on aligning assistive agents with accessibility needs, human context, and real-world deployment constraints."
     page_description: "Assistive agents should be evaluated and aligned around accessibility needs rather than generic task completion alone."
     image: "/images/publications/assistive-agents-alignment.png"
@@ -17,8 +45,23 @@ publications:
     links:
       - label: "Paper"
         url: "https://arxiv.org/abs/2605.13579"
-  - venue: "arXiv"
+  - venue: "arXiv 2026"
     title: "DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models"
+    authors:
+      - name: "Jiaqi Xiong"
+        equal: true
+      - name: "Yunjia Qi"
+        equal: true
+      - name: "Qi Cao"
+        equal: true
+      - name: "Yu Zheng"
+        highlight: true
+      - name: "Yutong Zhang"
+      - name: "Ziteng Wang"
+      - name: "Ruofan Liao"
+      - name: "Weisheng Xu"
+      - name: "Sichen Liu"
+        corresponding: true
     description: "A diagnostic benchmark for evaluating whether audio language models preserve acoustic evidence faithfully."
     page_description: "A benchmark for diagnosing whether audio language models ground their answers in faithful acoustic evidence."
     image: "/images/publications/deaf-overview.png"
@@ -26,8 +69,15 @@ publications:
     links:
       - label: "Paper"
         url: "https://arxiv.org/abs/2603.18048"
-  - venue: "arXiv"
+  - venue: "arXiv 2025"
     title: "OccSTeP: Benchmarking 4D Occupancy Spatio-Temporal Persistence"
+    authors:
+      - name: "Yu Zheng"
+        highlight: true
+      - name: "Jie Hu"
+      - name: "Kailun Yang"
+      - name: "Jiaming Zhang"
+        corresponding: true
     description: "A benchmark for studying how occupancy representations persist across space and time in dynamic 4D scenes."
     page_description: "A benchmark for evaluating how 4D occupancy methods preserve spatio-temporal consistency in dynamic scenes."
     image: "/images/publications/occstep-overview.png"
@@ -69,10 +119,9 @@ internships:
 
 projects_and_patents:
   meta: "Research Translation"
-  title: "Projects and patent"
+  title: "Projects"
   items:
     - "First author, China College Students Innovation and Entrepreneurship Project on sport data evaluation based on human pose estimation."
-    - "First author, patent CN117474726A on NLP and neural-network-based study-abroad application recommendation, entered substantive examination."
 
 awards:
   - year: "2024"
@@ -121,6 +170,3 @@ projects:
   - meta: "Robotics · RoboMaster"
     title: "Infantry Robot Systems"
     description: "Engineering work for RoboMaster competitions, contributing to award-winning infantry robot performance in university league and super league events."
-  - meta: "Patent · First Author"
-    title: "Study-Abroad Application Recommendation System"
-    description: "A recommendation method and system based on natural language processing and neural networks, currently entered substantive examination as CN117474726A."

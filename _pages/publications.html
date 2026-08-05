@@ -12,14 +12,12 @@ hide_title: true
 <section class="profile-page-heading">
   <p class="profile-kicker">Publications</p>
   <h1>Selected papers and preprints</h1>
-  <p>My recent work focuses on embodied AI, multimodal agents, acoustic faithfulness, and spatio-temporal scene understanding.</p>
 </section>
 
 <section class="profile-section profile-section--compact">
   <div class="profile-publication-list">
     {% for publication in profile.publications %}
-      {% assign description = publication.page_description | default: publication.description %}
-      {% include profile-publication-card.html publication=publication heading="h2" description=description %}
+      {% include profile-publication-card.html publication=publication heading="h2" hide_description=true %}
     {% endfor %}
   </div>
 </section>

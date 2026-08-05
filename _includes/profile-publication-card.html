@@ -7,7 +7,16 @@
   <div class="profile-publication__body">
     {% if publication.venue %}<p class="profile-publication__meta">{{ publication.venue }}</p>{% endif %}
     <{{ include.heading | default: "h3" }}>{{ publication.title }}</{{ include.heading | default: "h3" }}>
-    <p>{{ include.description | default: publication.description }}</p>
+    {% if publication.authors %}
+      <p class="profile-publication__authors">
+        {% for author in publication.authors %}
+          {% if author.highlight %}<strong>{{ author.name }}</strong>{% else %}{{ author.name }}{% endif %}{% if author.equal %}<sup>*</sup>{% endif %}{% if author.corresponding %}<sup>†</sup>{% endif %}{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </p>
+    {% endif %}
+    {% unless include.hide_description %}
+      <p>{{ include.description | default: publication.description }}</p>
+    {% endunless %}
     {% if publication.links %}
       <div class="profile-link-row">
         {% for link in publication.links %}

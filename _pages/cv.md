@@ -39,10 +39,9 @@ redirect_from:
 - Interface Development Intern, Dept. TEG, Tencent, Shenzhen, China
 - Assistant Tutor, Dept. RoboMaster, DJI, Shenzhen, China
 
-## Projects and Patents
+## Projects
 
 - **Sport Data Evaluation Technology Based on Human Pose Estimation and its Application** · China College Students Innovation and Entrepreneurship Project, provincial completed project, first author.
-- **A Study on Study-Abroad Application Recommendation Method and System Based on Natural Language Processing and Neural Networks** · First author, CN117474726A, entered substantive examination.
 
 ## Competitions
 

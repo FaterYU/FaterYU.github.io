@@ -34,11 +34,10 @@ redirect_from:
 <section class="profile-section">
   <h2 class="profile-section-title">Publications</h2>
   <div class="profile-publication-list">
-    {% for publication in profile.publications limit: 3 %}
-      {% include profile-publication-card.html publication=publication heading="h3" description=publication.description %}
+    {% for publication in profile.publications %}
+      {% include profile-publication-card.html publication=publication heading="h3" hide_description=true %}
     {% endfor %}
   </div>
-  <p class="profile-more"><a href="/publications/">View all publications</a></p>
 </section>
 
 <section class="profile-section">
@@ -83,7 +82,7 @@ redirect_from:
 </section>
 
 <section class="profile-section">
-  <h2 class="profile-section-title">Projects and Patents</h2>
+  <h2 class="profile-section-title">Projects</h2>
   {% assign project_group = profile.projects_and_patents %}
   <article class="profile-card">
     <p class="profile-card__meta">{{ project_group.meta }}</p>
