@@ -10,15 +10,15 @@ publications:
   - venue: "arXiv 2026"
     title: "Beyond Gene Reconstruction: Learning Cell Representations through Complementary Transcriptomic Views"
     authors:
-      - name: "Jiaqi Xiong"
+      - name: "J. Xiong"
         equal: true
-      - name: "Yuntao Hu"
+      - name: "Y. Hu"
         equal: true
-      - name: "Yu Zheng"
+      - name: "Y. Zheng"
         highlight: true
-      - name: "Yifei Shi"
-      - name: "Xinyue Guo"
-      - name: "Jiaxin Qi"
+      - name: "Y. Shi"
+      - name: "X. Guo"
+      - name: "J. Qi"
         corresponding: true
     description: "A contrastive pretraining framework for single-cell transcriptomes that learns transferable whole-cell representations from complementary gene-expression views."
     page_description: "CoCoS learns cell representations beyond masked gene reconstruction through co-expression-guided views, expression-aware contrast sets, and competence-gated contrastive onset."
@@ -30,12 +30,12 @@ publications:
   - venue: "ICML 2026 · Spotlight"
     title: "Position: Assistive Agents Need Accessibility Alignment"
     authors:
-      - name: "Jie Hu"
-      - name: "Changyuan Yan"
-      - name: "Yu Zheng"
+      - name: "J. Hu"
+      - name: "C. Yan"
+      - name: "Y. Zheng"
         highlight: true
-      - name: "Ziqian Wang"
-      - name: "Jiaming Zhang"
+      - name: "Z. Wang"
+      - name: "J. Zhang"
         corresponding: true
     description: "A position paper on aligning assistive agents with accessibility needs, human context, and real-world deployment constraints."
     page_description: "Assistive agents should be evaluated and aligned around accessibility needs rather than generic task completion alone."
@@ -48,19 +48,19 @@ publications:
   - venue: "arXiv 2026"
     title: "DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models"
     authors:
-      - name: "Jiaqi Xiong"
+      - name: "J. Xiong"
         equal: true
-      - name: "Yunjia Qi"
+      - name: "Y. Qi"
         equal: true
-      - name: "Qi Cao"
+      - name: "Q. Cao"
         equal: true
-      - name: "Yu Zheng"
+      - name: "Y. Zheng"
         highlight: true
-      - name: "Yutong Zhang"
-      - name: "Ziteng Wang"
-      - name: "Ruofan Liao"
-      - name: "Weisheng Xu"
-      - name: "Sichen Liu"
+      - name: "Y. Zhang"
+      - name: "Z. Wang"
+      - name: "R. Liao"
+      - name: "W. Xu"
+      - name: "S. Liu"
         corresponding: true
     description: "A diagnostic benchmark for evaluating whether audio language models preserve acoustic evidence faithfully."
     page_description: "A benchmark for diagnosing whether audio language models ground their answers in faithful acoustic evidence."
@@ -72,11 +72,11 @@ publications:
   - venue: "arXiv 2025"
     title: "OccSTeP: Benchmarking 4D Occupancy Spatio-Temporal Persistence"
     authors:
-      - name: "Yu Zheng"
+      - name: "Y. Zheng"
         highlight: true
-      - name: "Jie Hu"
-      - name: "Kailun Yang"
-      - name: "Jiaming Zhang"
+      - name: "J. Hu"
+      - name: "K. Yang"
+      - name: "J. Zhang"
         corresponding: true
     description: "A benchmark for studying how occupancy representations persist across space and time in dynamic 4D scenes."
     page_description: "A benchmark for evaluating how 4D occupancy methods preserve spatio-temporal consistency in dynamic scenes."
