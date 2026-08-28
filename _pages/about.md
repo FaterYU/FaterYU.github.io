@@ -84,6 +84,27 @@ redirect_from:
 </section>
 
 <section class="profile-section">
+  <h2 class="profile-section-title">Patents</h2>
+  <div class="profile-patent-list">
+    {% for patent in profile.patents %}
+      <article class="profile-patent">
+        <div class="profile-patent__header">
+          <p class="profile-patent__meta">{{ patent.year }} · {{ patent.type }}</p>
+          <span class="profile-patent__status">{{ patent.status }}</span>
+        </div>
+        <h3>{{ patent.title }}</h3>
+        <p class="profile-patent__inventors">
+          {% for inventor in patent.inventors %}
+            {% if inventor.highlight %}<strong>{{ inventor.name }}</strong>{% else %}{{ inventor.name }}{% endif %}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </p>
+        <p class="profile-patent__details">Patent No. {{ patent.patent_no }} · Publication No. {{ patent.publication_no }} · Granted {{ patent.granted_date }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="profile-section">
   <h2 class="profile-section-title">Awards</h2>
   <div class="profile-award-list">
     {% for award in profile.awards %}

@@ -43,6 +43,10 @@ redirect_from:
 
 - **Sport Data Evaluation Technology Based on Human Pose Estimation and its Application** · China College Students Innovation and Entrepreneurship Project, provincial completed project, first author.
 
+## Patents
+
+- **2026 · Chinese Invention Patent · Granted** · *Coordinated Path and Height Planning System for a Height-Adjustable Wheeled-Legged Robot in Weeding*. Inventors: **Y. Zheng**, J. Gao. Patent No. ZL 2026 1 0943575.X; publication No. CN 122439517 B. Filed June 29, 2026; granted August 28, 2026. Assignee: 杭州旷域智能科技有限公司.
+
 ## Competitions
 
 - 2024 RoboMaster University League Mech Master Competition Infantry Robot Award, National First Prize

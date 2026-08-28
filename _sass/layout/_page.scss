@@ -435,6 +435,74 @@
   }
 }
 
+.profile-patent-list {
+  border-top: 1px solid var(--profile-border-color);
+}
+
+.profile-patent {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--profile-border-color);
+
+  h3 {
+    max-width: 760px;
+    margin: 0.35rem 0 0.3rem;
+    color: var(--global-text-color);
+    font-family: $sans-serif;
+    font-size: 1.08em;
+    line-height: 1.4;
+  }
+}
+
+.profile-patent__header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 0.8rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-patent__meta {
+  margin: 0;
+  color: var(--profile-accent-color);
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+  font-weight: 800;
+}
+
+.profile-patent__status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.6rem;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--profile-border-color);
+  border-radius: 4px;
+  background: var(--profile-muted-surface-color);
+  color: var(--profile-accent-color-strong);
+  font-family: $sans-serif;
+  font-size: $type-size-7;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.profile-patent__inventors {
+  margin: 0;
+  color: var(--global-text-color);
+  font-size: $type-size-6;
+  line-height: 1.5;
+
+  strong {
+    color: var(--profile-accent-color-strong);
+    font-weight: 800;
+  }
+}
+
+.profile-patent__details {
+  margin: 0.35rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: $type-size-6;
+  line-height: 1.5;
+}
+
 .profile-activity-stack {
   display: grid;
   gap: 1.4rem;
