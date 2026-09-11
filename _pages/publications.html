@@ -16,7 +16,8 @@ hide_title: true
 
 <section class="profile-section profile-section--compact">
   <div class="profile-publication-list">
-    {% for publication in profile.publications %}
+    {% assign publications = profile.publications | sort: 'sort_month' | reverse %}
+    {% for publication in publications %}
       {% include profile-publication-card.html publication=publication heading="h2" hide_description=true %}
     {% endfor %}
   </div>

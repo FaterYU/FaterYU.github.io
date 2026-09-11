@@ -23,9 +23,10 @@ redirect_from:
 
 ## Publications
 
-- **ICML 2026 Spotlight** · Position: Assistive Agents Need Accessibility Alignment. [[paper]](https://arxiv.org/abs/2605.13579)
-- **Findings of AACL-IJCNLP 2026** · DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models. [[paper]](https://arxiv.org/abs/2603.18048)
-- **arXiv** · OccSTeP: Benchmarking 4D Occupancy Spatio-Temporal Persistence. [[paper]](https://arxiv.org/abs/2512.15621) [[website]](https://insai-lab.github.io/OccSTeP.github.io/) [[code]](https://github.com/FaterYU/OccSTeP)
+{% assign publications = site.data.profile.publications | sort: 'sort_month' | reverse %}
+{% for publication in publications %}
+- **{{ publication.venue }}** · {{ publication.title }}. {% for link in publication.links %}[[{{ link.label | downcase }}]]({{ link.url }}) {% endfor %}
+{% endfor %}
 
 ## Professional Activities
 

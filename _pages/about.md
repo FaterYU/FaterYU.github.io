@@ -34,7 +34,8 @@ redirect_from:
 <section class="profile-section">
   <h2 class="profile-section-title">Publications</h2>
   <div class="profile-publication-list">
-    {% for publication in profile.publications %}
+    {% assign publications = profile.publications | sort: 'sort_month' | reverse %}
+    {% for publication in publications %}
       {% include profile-publication-card.html publication=publication heading="h3" hide_description=true compact=true %}
     {% endfor %}
   </div>

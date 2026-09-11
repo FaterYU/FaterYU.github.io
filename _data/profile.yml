@@ -7,7 +7,9 @@ research_interests:
   - Multimodal Agents
 
 publications:
+  # Sort by first preprint month when available; acceptance does not change order.
   - venue: "arXiv 2026"
+    sort_month: "2026-08"
     title: "Beyond Gene Reconstruction: Learning Cell Representations through Complementary Transcriptomic Views"
     authors:
       - name: "J. Xiong"
@@ -28,6 +30,7 @@ publications:
       - label: "Paper"
         url: "https://arxiv.org/abs/2608.00985"
   - venue: "ICML 2026 · Spotlight"
+    sort_month: "2026-05"
     title: "Position: Assistive Agents Need Accessibility Alignment"
     authors:
       - name: "J. Hu"
@@ -45,7 +48,8 @@ publications:
     links:
       - label: "Paper"
         url: "https://arxiv.org/abs/2605.13579"
-  - venue: "Findings of AACL-IJCNLP 2026"
+  - venue: "AACL-IJCNLP 2026"
+    sort_month: "2026-03"
     title: "DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models"
     authors:
       - name: "J. Xiong"
@@ -66,10 +70,12 @@ publications:
     page_description: "A benchmark for diagnosing whether audio language models ground their answers in faithful acoustic evidence."
     image: "/images/publications/deaf-overview.png"
     image_alt: "Overview of the DEAF acoustic faithfulness benchmark framework"
+    featured: true
     links:
       - label: "Paper"
         url: "https://arxiv.org/abs/2603.18048"
   - venue: "arXiv 2025"
+    sort_month: "2025-12"
     title: "OccSTeP: Benchmarking 4D Occupancy Spatio-Temporal Persistence"
     authors:
       - name: "Y. Zheng"
