@@ -45,7 +45,7 @@ publications:
     links:
       - label: "Paper"
         url: "https://arxiv.org/abs/2605.13579"
-  - venue: "arXiv 2026"
+  - venue: "Findings of AACL-IJCNLP 2026"
     title: "DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models"
     authors:
       - name: "J. Xiong"
@@ -124,6 +124,16 @@ projects_and_patents:
     - "First author, China College Students Innovation and Entrepreneurship Project on sport data evaluation based on human pose estimation."
 
 patents:
+  - year: "2026"
+    type: "Chinese Invention Patent"
+    status: "Grant Notice Issued"
+    title: "Intelligent Navigation Method, Apparatus, Equipment, and Medium for Agricultural Machinery"
+    official_title: "农业机械设备的智能化导航方法、装置、设备和介质"
+    application_no: "202610729267.7"
+    application_date: "May 26, 2026"
+    grant_notice_date: "September 8, 2026"
+    assignee: "杭州旷域智能科技有限公司"
+
   - year: "2026"
     type: "Chinese Invention Patent"
     status: "Granted"

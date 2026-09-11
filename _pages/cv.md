@@ -24,7 +24,7 @@ redirect_from:
 ## Publications
 
 - **ICML 2026 Spotlight** · Position: Assistive Agents Need Accessibility Alignment. [[paper]](https://arxiv.org/abs/2605.13579)
-- **arXiv** · DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models. [[paper]](https://arxiv.org/abs/2603.18048)
+- **Findings of AACL-IJCNLP 2026** · DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models. [[paper]](https://arxiv.org/abs/2603.18048)
 - **arXiv** · OccSTeP: Benchmarking 4D Occupancy Spatio-Temporal Persistence. [[paper]](https://arxiv.org/abs/2512.15621) [[website]](https://insai-lab.github.io/OccSTeP.github.io/) [[code]](https://github.com/FaterYU/OccSTeP)
 
 ## Professional Activities
@@ -44,6 +44,8 @@ redirect_from:
 - **Sport Data Evaluation Technology Based on Human Pose Estimation and its Application** · China College Students Innovation and Entrepreneurship Project, provincial completed project, first author.
 
 ## Patents
+
+- **2026 · Chinese Invention Patent · Grant Notice Issued** · *Intelligent Navigation Method, Apparatus, Equipment, and Medium for Agricultural Machinery*. Application No. 202610729267.7. Filed May 26, 2026; grant notice issued September 8, 2026; registration pending. Applicant: 杭州旷域智能科技有限公司.
 
 - **2026 · Chinese Invention Patent · Granted** · *Coordinated Path and Height Planning System for a Height-Adjustable Wheeled-Legged Robot in Weeding*. Inventors: **Y. Zheng**, J. Gao. Patent No. ZL 2026 1 0943575.X; publication No. CN 122439517 B. Filed June 29, 2026; granted August 28, 2026. Assignee: 杭州旷域智能科技有限公司.
 

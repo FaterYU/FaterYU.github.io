@@ -93,12 +93,16 @@ redirect_from:
           <span class="profile-patent__status">{{ patent.status }}</span>
         </div>
         <h3>{{ patent.title }}</h3>
+        {% if patent.inventors.size > 0 %}
         <p class="profile-patent__inventors">
           {% for inventor in patent.inventors %}
             {% if inventor.highlight %}<strong>{{ inventor.name }}</strong>{% else %}{{ inventor.name }}{% endif %}{% unless forloop.last %}, {% endunless %}
           {% endfor %}
         </p>
-        <p class="profile-patent__details">Patent No. {{ patent.patent_no }} · Publication No. {{ patent.publication_no }} · Granted {{ patent.granted_date }}</p>
+        {% endif %}
+        <p class="profile-patent__details">
+          {% if patent.patent_no %}Patent No. {{ patent.patent_no }}{% elsif patent.application_no %}Application No. {{ patent.application_no }}{% endif %}{% if patent.publication_no %} · Publication No. {{ patent.publication_no }}{% endif %}{% if patent.granted_date %} · Granted {{ patent.granted_date }}{% elsif patent.grant_notice_date %} · Grant notice {{ patent.grant_notice_date }} · Registration pending{% endif %}
+        </p>
       </article>
     {% endfor %}
   </div>
