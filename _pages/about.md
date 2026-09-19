@@ -3,6 +3,7 @@ permalink: /
 title: "Home"
 description: "Yu Zheng is a master's student at Hunan University working on computer vision, robotics, embodied AI, and world models."
 author_profile: true
+profile_layout: true
 hide_title: true
 redirect_from: 
   - /about/
@@ -12,27 +13,39 @@ redirect_from:
 {% assign profile = site.data.profile %}
 
 <section class="profile-hero">
-  <p class="profile-eyebrow">Hunan University · AI and Robotics</p>
-  <h1>Yu Zheng <span>郑誉</span></h1>
-  <p class="profile-lede">I am a master's student in Electronic Information at the School of Artificial Intelligence and Robotics, Hunan University. I work on computer vision, representation learning, robotics, and embodied AI, co-advised by <a href="https://jamycheung.github.io/">Prof. Jiaming Zhang</a> and <a href="https://yangkailun.com/">Prof. Kailun Yang</a>.</p>
-  <div class="profile-actions">
-    <a class="btn btn--primary" href="/publications/">Publications</a>
-    <a class="btn btn--inverse" href="/projects/">Projects</a>
-    <a class="btn btn--inverse" href="mailto:defateyz@gmail.com">Email</a>
+  <div class="profile-identity">
+    <img class="profile-mobile-avatar" src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="" width="80" height="80">
+    <div>
+      <p class="profile-eyebrow">Master's student · Hunan University</p>
+      <h1>Yu Zheng <span lang="zh">郑誉</span></h1>
+    </div>
   </div>
-</section>
-
-<section class="profile-section">
-  <h2 class="profile-section-title">Research</h2>
+  <p class="profile-lede">I am a master's student in Electronic Information at Hunan University's School of Artificial Intelligence and Robotics, co-advised by <a href="https://jamycheung.github.io/">Prof. Jiaming Zhang</a> and <a href="https://yangkailun.com/">Prof. Kailun Yang</a>.</p>
   <ul class="profile-focus-list" aria-label="Research interests">
     {% for interest in profile.research_interests %}
       <li>{{ interest }}</li>
     {% endfor %}
   </ul>
+  <div class="profile-actions">
+    <a class="profile-button profile-button--primary" href="#publications">Publications <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+    <a class="profile-button profile-button--secondary" href="mailto:{{ site.author.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
+  </div>
+  <div class="profile-mobile-links">
+    <a href="{{ site.author.googlescholar }}">Google Scholar</a>
+    <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+    <details class="profile-contact-menu">
+      <summary>More <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary>
+      <ul>
+        <li><a href="{{ site.author.uri }}">Website</a></li>
+        <li><a href="https://space.bilibili.com/{{ site.author.bilibili }}">bilibili</a></li>
+        <li><a href="{{ site.author.xiaohongshu }}">RedNote</a></li>
+      </ul>
+    </details>
+  </div>
 </section>
 
-<section class="profile-section">
-  <h2 class="profile-section-title">Publications</h2>
+<section class="profile-section profile-section--publications" id="publications" tabindex="-1" aria-labelledby="publications-heading">
+  <h2 class="profile-section-title" id="publications-heading">Publications</h2>
   <div class="profile-publication-list">
     {% assign publications = profile.publications | sort: 'sort_month' | reverse %}
     {% for publication in publications %}

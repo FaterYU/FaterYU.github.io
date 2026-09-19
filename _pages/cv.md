@@ -4,6 +4,7 @@ title: "CV"
 description: "Curriculum vitae of Yu Zheng."
 permalink: /cv/
 author_profile: true
+profile_layout: true
 hide_title: true
 redirect_from:
   - /resume

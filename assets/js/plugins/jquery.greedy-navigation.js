@@ -6,7 +6,7 @@
 */
 
 var $nav = $('#site-nav');
-var $btn = $('#site-nav button');
+var $btn = $('#site-nav > .nav-toggle');
 var $vlinks = $('#site-nav .visible-links');
 var $vlinks_persist_tail = $vlinks.children("*.persist.tail");
 var $hlinks = $('#site-nav .hidden-links');
@@ -52,6 +52,7 @@ function updateNav() {
       $btn.addClass('hidden');
       $btn.removeClass('close');
       $hlinks.addClass('hidden');
+      $btn.attr({ 'aria-expanded': 'false', 'aria-label': 'Open navigation' });
     }
   }
 
@@ -62,9 +63,9 @@ function updateNav() {
   var mastheadHeight = $('.masthead').height();
   $('body').css('padding-top', mastheadHeight + 'px');
   if ($(".author__urls-wrapper button").is(":visible")) {
-    $(".sidebar").css("padding-top", "");
+    $(".sidebar").not('.profile-site .sidebar').css("padding-top", "");
   } else {
-    $(".sidebar").css("padding-top", mastheadHeight + "px");
+    $(".sidebar").not('.profile-site .sidebar').css("padding-top", mastheadHeight + "px");
   }
 
 }
@@ -74,13 +75,33 @@ function updateNav() {
 $(window).on('resize', function () {
   updateNav();
 });
-screen.orientation.addEventListener("change", function () {
-  updateNav();
-});
+if (screen.orientation && screen.orientation.addEventListener) {
+  screen.orientation.addEventListener("change", updateNav);
+}
 
 $btn.on('click', function () {
   $hlinks.toggleClass('hidden');
   $(this).toggleClass('close');
+  var expanded = !$hlinks.hasClass('hidden');
+  $(this).attr({ 'aria-expanded': String(expanded), 'aria-label': expanded ? 'Close navigation' : 'Open navigation' });
 });
+
+function closeNavigation() {
+  $hlinks.addClass('hidden');
+  $btn.removeClass('close').attr({ 'aria-expanded': 'false', 'aria-label': 'Open navigation' });
+}
+
+$(document).on('keydown', function (event) {
+  if (event.key === 'Escape' && !$hlinks.hasClass('hidden')) {
+    closeNavigation();
+    $btn.trigger('focus');
+  }
+});
+
+$(document).on('click', function (event) {
+  if (!$(event.target).closest('#site-nav').length) closeNavigation();
+});
+
+$hlinks.on('click', 'a', closeNavigation);
 
 updateNav();

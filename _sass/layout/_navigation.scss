@@ -189,9 +189,10 @@
     }
   }
 
-  button {
+  > .nav-toggle {
     position: absolute;
     height: 2.5rem;
+    width: 44px;
     right: 0;
     padding: 0 0.5rem;
     border: 0;
@@ -200,10 +201,16 @@
     color: #fff;
     cursor: pointer;
     z-index: 100;
+
+    i { font-size: 22px; }
+    .nav-close-icon { display: none; }
+    &.close .nav-menu-icon { display: none; }
+    &.close .nav-close-icon { display: inline-block; }
   }
 
   .visible-links {
     display: table;
+    width: max-content;
 
     li {
       display: table-cell;
@@ -211,7 +218,7 @@
 
       &:first-child {
         font-weight: bold;
-        text-wrap: wrap;
+        white-space: nowrap;
 
         a {
           margin-left: 0;
@@ -226,12 +233,20 @@
     }
 
     #theme-toggle {
-      a {
-        width: 25px;
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
-      }
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--global-masthead-link-color);
+      cursor: pointer;
+
+      &:hover { background: var(--global-border-color); }
+      &:focus-visible { outline: 2px solid var(--global-link-color); outline-offset: 2px; }
     }
 
     a {

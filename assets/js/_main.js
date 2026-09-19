@@ -23,6 +23,8 @@ $(document).ready(function () {
       $("html").removeAttr("data-theme");
       $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
     }
+    const themeLabel = use_theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+    $("#theme-toggle").attr({ "aria-label": themeLabel, title: themeLabel });
   };
 
   setTheme();
@@ -46,11 +48,9 @@ $(document).ready(function () {
 
   $('#theme-toggle').on('click', toggleTheme);
 
-  // These should be the same as the settings in _variables.scss
-  const scssLarge = 925; // pixels
-
   // Sticky footer
   var bumpIt = function () {
+    if ($("body").hasClass("profile-site")) return;
     $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
   },
     didResize = false;
@@ -72,21 +72,43 @@ $(document).ready(function () {
 
   // Follow menu drop down
   $(".author__urls-wrapper button").on("click", function () {
-    $(".author__urls").fadeToggle("fast", function () { });
-    $(".author__urls-wrapper button").toggleClass("open");
+    const expanded = $(this).attr("aria-expanded") === "true";
+    $(this).attr("aria-expanded", String(!expanded)).toggleClass("open", !expanded);
+    $(this).siblings(".author__urls").stop(true, true).toggle(!expanded);
+  });
+
+  $(document).on("keydown", function (event) {
+    if (event.key !== "Escape") return;
+    const $contacts = $(".author__urls-wrapper button[aria-expanded='true']:visible");
+    if ($contacts.length) {
+      $contacts.trigger("click").trigger("focus");
+    }
+    const $more = $(".profile-contact-menu[open]");
+    if ($more.length) {
+      $more.removeAttr("open").find("summary").trigger("focus");
+    }
+  });
+
+  $(document).on("click", function (event) {
+    if (!$(event.target).closest(".profile-contact-menu").length) {
+      $(".profile-contact-menu[open]").removeAttr("open");
+    }
   });
 
   // Restore the follow menu if toggled on a window resize
   jQuery(window).on('resize', function () {
-    if ($('.author__urls.social-icons').css('display') == 'none' && $(window).width() >= scssLarge) {
-      $(".author__urls").css('display', 'block')
-    }
+    $(".author__urls-wrapper").each(function () {
+      const $button = $(this).children("button");
+      $(this).children(".author__urls").css("display", $button.is(":visible")
+        ? ($button.attr("aria-expanded") === "true" ? "block" : "none") : "");
+    });
   });
 
   // init smooth scroll, this needs to be slightly more than then fixed masthead height
   $("a").smoothScroll({ 
     offset: -75, // needs to match $masthead-height
     preventDefault: false,
+    speed: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 400,
   }); 
 
   // add lightbox class to all image links
@@ -131,6 +153,9 @@ $(document).ready(function () {
     // make it unique to apply your CSS animations just to this exact popup
     mainClass: 'mfp-zoom-in',
     callbacks: {
+      open: function () {
+        $(".mfp-wrap").attr({ "role": "dialog", "aria-modal": "true", "aria-label": "Image preview" });
+      },
       beforeOpen: function () {
         // just a hack that adds mfp-anim class to markup
         this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');

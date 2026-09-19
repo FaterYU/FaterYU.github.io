@@ -1,7 +1,9 @@
 <article class="profile-publication{% if include.compact %} profile-publication--compact{% endif %}{% if publication.featured %} profile-publication--featured{% endif %}">
   {% if publication.image %}
     <figure class="profile-publication__media">
-      <img src="{{ publication.image | relative_url }}" alt="{{ publication.image_alt | default: publication.title }}">
+      <a class="image-popup" href="{{ publication.image | relative_url }}" aria-label="View figure: {{ publication.title | escape }}" title="View figure">
+        <img src="{{ publication.image | relative_url }}" alt="{{ publication.image_alt | default: publication.title }}" loading="lazy" decoding="async">
+      </a>
     </figure>
   {% endif %}
   <div class="profile-publication__body">
