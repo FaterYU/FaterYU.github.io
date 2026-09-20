@@ -31,7 +31,7 @@ redirect_from:
 
 ## Professional Activities
 
-- Conference reviewer for IROS.
+- Conference reviewer for ICLR and IROS.
 - Journal reviewer for RAL.
 - Workshop organizer, **Assistive Agents for All**, UbiComp 2026. [[website]](https://insailab.org/ubicomp2026-aaa-workshop/)
 
