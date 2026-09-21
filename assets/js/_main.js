@@ -48,6 +48,19 @@ $(document).ready(function () {
 
   $('#theme-toggle').on('click', toggleTheme);
 
+  // Count visits after the host page loads, even when the globe is below the fold.
+  const visitorFrame = document.querySelector('.visitor-globe iframe[data-src]');
+  if (visitorFrame) {
+    const loadVisitorGlobe = function () {
+      visitorFrame.src = visitorFrame.dataset.src;
+    };
+    if (document.readyState === 'complete') {
+      loadVisitorGlobe();
+    } else {
+      window.addEventListener('load', loadVisitorGlobe, { once: true });
+    }
+  }
+
   // Sticky footer
   var bumpIt = function () {
     if ($("body").hasClass("profile-site")) return;

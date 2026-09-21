@@ -1,5 +1,6 @@
 /* Keep profile typography independent of the original article template. */
 .profile-site {
+  color-scheme: light;
   --global-bg-color: #fcfcfc;
   --global-footer-bg-color: #f4f4f5;
   --global-text-color: #242426;
@@ -119,6 +120,13 @@
     color: var(--global-text-color);
     background: var(--profile-surface-color);
     border-color: var(--profile-border-color);
+  }
+
+  .visitor-globe {
+    width: 160px;
+    height: 184px;
+    margin: 24px auto 0;
+    iframe { display: block; width: 100%; height: 100%; border: 0; }
   }
 
   .profile-hero {
@@ -276,10 +284,15 @@
     .author__content { margin: 20px 0; }
     .author__bio { margin: 8px 0 0; font-size: 13px; }
   }
+  @media (min-width: 1024px) and (max-height: 999px) {
+    .sidebar { position: static; max-height: none; overflow: visible; }
+  }
   @media (max-width: 1023px) {
-    #main { margin-top: 32px; }
-    &.profile-home .sidebar { display: none; }
-    .sidebar > [itemscope] { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; align-items: center; gap: 12px; }
+    #main { display: flex; flex-direction: column; margin-top: 32px; }
+    .sidebar { display: contents; }
+    &.profile-home .sidebar > [itemscope] { display: none; }
+    .visitor-globe { order: 1; flex: none; margin-top: 40px; }
+    .sidebar > [itemscope] { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; align-items: center; gap: 12px; margin-bottom: 32px; }
     .sidebar .author__avatar { display: block; width: 52px; height: 52px; }
     .sidebar .author__avatar img { width: 52px; height: 52px; }
     .sidebar .author__content { display: block; padding: 0; margin: 0; }
