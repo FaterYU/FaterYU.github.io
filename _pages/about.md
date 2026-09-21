@@ -36,6 +36,12 @@ redirect_from:
     <details class="profile-contact-menu">
       <summary>More <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary>
       <ul>
+        {% if site.author.linkedin %}
+          <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a></li>
+        {% endif %}
+        {% if site.author.orcid %}
+          <li><a href="{{ site.author.orcid }}">ORCID</a></li>
+        {% endif %}
         <li><a href="{{ site.author.uri }}">Website</a></li>
         <li><a href="https://space.bilibili.com/{{ site.author.bilibili }}">bilibili</a></li>
         <li><a href="{{ site.author.xiaohongshu }}">RedNote</a></li>
