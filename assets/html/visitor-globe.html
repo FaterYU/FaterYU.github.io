@@ -7,10 +7,19 @@
     <base target="_blank">
     <title>Visitor globe</title>
     <style>
-      :root { color-scheme: light dark; }
-      html, body { margin: 0; padding: 0; background: transparent; }
+      :root { color-scheme: light; background: #fcfcfc; }
+      :root[data-theme="dark"] { color-scheme: dark; background: #1c1c1e; }
+      html, body { margin: 0; padding: 0; }
       body { width: 160px; overflow: hidden; }
     </style>
+    <script>
+      document.documentElement.setAttribute('data-theme', location.hash === '#dark' ? 'dark' : 'light');
+      window.addEventListener('message', function (event) {
+        if (event.source !== window.parent || !event.data || event.data.type !== 'visitor-globe-theme') return;
+        if (event.data.theme !== 'light' && event.data.theme !== 'dark') return;
+        document.documentElement.setAttribute('data-theme', event.data.theme);
+      });
+    </script>
   </head>
   <body>
     <script type="text/javascript" id="mmvst_globe" src="https://mapmyvisitors.com/globe.js?d=pY8XTCmekYisc2cn4B3UrGR5HzWE-HTgBPGiR8mHElw"></script>

@@ -3,6 +3,14 @@
    ========================================================================== */
 
 $(document).ready(function () {
+  const visitorFrame = document.querySelector('.visitor-globe iframe[data-src]');
+  const syncVisitorTheme = function () {
+    if (!visitorFrame || !visitorFrame.contentWindow) return;
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    // The sandboxed frame has an opaque origin; only public theme state is sent.
+    visitorFrame.contentWindow.postMessage({ type: 'visitor-globe-theme', theme: theme }, '*');
+  };
+
   // detect OS/browser preference
   const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches
     ? 'dark'
@@ -25,6 +33,7 @@ $(document).ready(function () {
     }
     const themeLabel = use_theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
     $("#theme-toggle").attr({ "aria-label": themeLabel, title: themeLabel });
+    syncVisitorTheme();
   };
 
   setTheme();
@@ -49,10 +58,11 @@ $(document).ready(function () {
   $('#theme-toggle').on('click', toggleTheme);
 
   // Count visits after the host page loads, even when the globe is below the fold.
-  const visitorFrame = document.querySelector('.visitor-globe iframe[data-src]');
   if (visitorFrame) {
+    visitorFrame.addEventListener('load', syncVisitorTheme);
     const loadVisitorGlobe = function () {
-      visitorFrame.src = visitorFrame.dataset.src;
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      visitorFrame.src = visitorFrame.dataset.src + '#' + theme;
     };
     if (document.readyState === 'complete') {
       loadVisitorGlobe();
