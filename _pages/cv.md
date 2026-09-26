@@ -24,7 +24,7 @@ redirect_from:
 
 ## Publications
 
-{% assign publications = site.data.profile.publications | sort: 'sort_month' | reverse %}
+{% assign publications = site.data.profile.publications | where_exp: "publication", "publication.hidden != true" | sort: 'sort_month' | reverse %}
 {% for publication in publications %}
 - **{{ publication.venue }}** · {{ publication.title }}. {% for link in publication.links %}[[{{ link.label | downcase }}]]({{ link.url }}) {% endfor %}
 {% endfor %}

@@ -20,7 +20,8 @@ redirect_from:
 
 <section class="profile-section profile-section--compact">
   <div class="profile-card-grid profile-card-grid--wide">
-    {% for project in profile.projects %}
+    {% assign projects = profile.projects | where_exp: "project", "project.hidden != true" %}
+    {% for project in projects %}
       <article class="profile-card">
         <p class="profile-card__meta">{{ project.meta }}</p>
         <h2>{{ project.title }}</h2>

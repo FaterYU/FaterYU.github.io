@@ -8,6 +8,32 @@ research_interests:
 
 publications:
   # Sort by first preprint month when available; acceptance does not change order.
+  # These two entries temporarily use the acceptance month until preprint dates are available.
+  - venue: "NeurIPS 2026"
+    sort_month: "2026-09"
+    title: "VLAN: Vision-Language Accessible Navigation"
+    authors:
+      - name: "J. Hu"
+      - name: "Y. Zheng"
+        highlight: true
+      - name: "W. Wu"
+      - name: "W. Feng"
+      - name: "C. Cheng"
+      - name: "J. Zhang"
+    featured: true
+  - venue: "NeurIPS 2026"
+    sort_month: "2026-09"
+    title: "OccStress: Stress-Testing the 4D Occupancy Forecasting Chain"
+    authors:
+      - name: "Y. Zheng"
+        highlight: true
+      - name: "J. Hu"
+      - name: "J. Xiong"
+      - name: "R. Liu"
+      - name: "J. Zheng"
+      - name: "K. Yang"
+      - name: "J. Zhang"
+    featured: true
   - venue: "arXiv 2026"
     sort_month: "2026-08"
     title: "Beyond Gene Reconstruction: Learning Cell Representations through Complementary Transcriptomic Views"
@@ -77,6 +103,7 @@ publications:
   - venue: "arXiv 2025"
     sort_month: "2025-12"
     title: "OccSTeP: Benchmarking 4D Occupancy Spatio-Temporal Persistence"
+    hidden: true
     authors:
       - name: "Y. Zheng"
         highlight: true
@@ -188,6 +215,7 @@ awards:
 projects:
   - meta: "Benchmark · 4D Occupancy"
     title: "OccSTeP"
+    hidden: true
     description: "A benchmark for evaluating spatio-temporal persistence in 4D occupancy prediction, with a focus on long-horizon consistency in dynamic scenes."
     links:
       - label: "Website"

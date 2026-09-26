@@ -272,6 +272,7 @@
 
   @media (min-width: 640px) {
     .profile-publication { grid-template-columns: 240px minmax(0, 1fr); gap: 24px; }
+    .profile-publication__body { grid-column: 2; }
     .profile-timeline li { display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 0 20px; }
     .profile-timeline p { grid-column: 2; }
     .profile-award-item { grid-template-columns: 44px minmax(0, 1fr) 155px; }
