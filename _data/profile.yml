@@ -7,9 +7,13 @@ research_interests:
   - Multimodal Agents
 
 news:
-  # Use the event month (YYYY-MM), independently of publication preprint dates.
+  # Preserve the known event date (YYYY-MM or YYYY-MM-DD), independently of preprints.
+  - date: "2026-09-26"
+    text: "Two papers accepted to **NeurIPS 2026**."
   - date: "2026-09"
-    text: "[OccStress](#occstress) and [VLAN](#vlan) accepted to **NeurIPS 2026**."
+    text: "One paper accepted to **AACL-IJCNLP 2026**."
+  - date: "2026-05-01"
+    text: "One paper accepted to **ICML 2026** as a **Spotlight**."
 
 publications:
   # Sort by first preprint month when available; acceptance does not change order.

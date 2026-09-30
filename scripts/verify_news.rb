@@ -1,6 +1,7 @@
 require "jekyll"
 require "nokogiri"
 require "yaml"
+require "date"
 
 root = File.expand_path("..", __dir__)
 profile = YAML.load_file(File.join(root, "_data/profile.yml"))
@@ -13,43 +14,57 @@ end
 
 entries = profile.fetch("news", [])
 entries.each do |item|
-  verify.call(item.fetch("date").match?(/\A\d{4}-(0[1-9]|1[0-2])\z/), "News dates must be quoted YYYY-MM strings")
+  date = item.fetch("date")
+  verify.call(date.is_a?(String) && date.match?(/\A\d{4}-(0[1-9]|1[0-2])(-\d{2})?\z/), "News dates must be quoted YYYY-MM or YYYY-MM-DD strings")
+  Date.iso8601(date.length == 7 ? "#{date}-01" : date)
 end
 expected = entries.sort_by { |item| item.fetch("date") }.reverse
 verify.call(home.css("#news time").map { |time| time["datetime"] } == expected.map { |item| item.fetch("date") }, "Homepage news dates/order differ from data")
-verify.call(home.css("#news > .profile-news-list > li").length == [entries.length, 3].min, "Homepage must show at most three recent entries")
-verify.call(home.css("#news details").length == (entries.length > 3 ? 1 : 0), "Archive should only appear when needed")
+verify.call(home.css("#news .profile-news-list > li").length == entries.length, "All news must remain in the scrollable list")
+verify.call(home.css("#news details").empty?, "News should scroll instead of collapsing")
 verify.call(home.css("#news a[href^='#']").all? { |link| home.css("[id]").count { |element| element["id"] == link["href"].delete_prefix("#") } == 1 }, "News contains a missing or duplicate anchor target")
 if entries.any?
+  verify.call(home.at_css(".profile-news-scroll[tabindex='0'][role='region'][aria-label='News list']"), "News scrolling needs a named keyboard target")
   sections = home.css(".profile-hero, .profile-news, .profile-section--publications")
   verify.call(sections.map { |section| section["class"].split.last } == ["profile-hero", "profile-news", "profile-section--publications"], "News must sit between the introduction and publications")
 end
 
-# Exercise archive boundaries without changing the profile data or writing a site.
+%w[index.html publications/index.html].each do |path|
+  page = Nokogiri::HTML(File.read(File.join(root, "_site", path)))
+  scroll = page.at_css(".profile-publication-scroll[tabindex='0'][role='region'][aria-label='Publication list']")
+  verify.call(scroll, "Missing keyboard-accessible publication scroll area: #{path}")
+  publications = profile.fetch("publications").reject { |paper| paper["hidden"] == true }.sort_by { |paper| paper.fetch("sort_month") }.reverse
+  verify.call(scroll.css(".profile-publication h2, .profile-publication h3").map(&:text) == publications.map { |paper| paper.fetch("title") }, "Scrolling must retain all visible publications in order: #{path}")
+end
+
+# Exercise empty, long and mixed-precision lists without changing profile data.
 site = Jekyll::Site.new(Jekyll.configuration("source" => root, "quiet" => true))
 template = Liquid::Template.parse("{% include profile-news.html news=entries %}")
 fixtures = (1..5).map do |month|
   { "date" => "2026-#{format('%02d', month)}", "text" => "Update #{month}: **Accepted** with [details](#vlan)." }
 end
-[nil, [], fixtures.take(1), fixtures.take(3), fixtures.take(4), fixtures].each do |items|
+dated = ["2026-05-01", "2026-09", "2026-09-26"].map do |date|
+  { "date" => date, "text" => "One paper **accepted** with [details](#vlan)." }
+end
+[nil, [], fixtures.take(1), fixtures.take(3), fixtures.take(4), fixtures, dated].each do |items|
   rendered = template.render!({ "entries" => items }, registers: { site: site })
   page = Nokogiri::HTML.fragment(rendered)
   count = Array(items).length
   verify.call(page.css("#news").length == (count.zero? ? 0 : 1), "Empty or missing news should hide the section")
   verify.call(page.css(".profile-news-list li").length == count, "News entry missing or duplicated")
-  verify.call(page.css("#news > ol > li").length == [count, 3].min, "Wrong recent entry count")
+  verify.call(page.css(".profile-news-scroll > ol > li").length == count, "News must not be truncated")
   verify.call(page.css("time").map { |time| time["datetime"] } == Array(items).map { |item| item["date"] }.sort.reverse, "News is not newest first")
-  verify.call(page.css("details").length == (count > 3 ? 1 : 0), "Wrong archive visibility")
+  verify.call(page.css("details").empty?, "Unexpected collapsed archive")
   next if count.zero?
 
-  verify.call(page.at_css("time").text.match?(/\A[A-Z][a-z]{2} 2026\z/), "Invalid month label")
+  labels = Array(items).sort_by { |item| item["date"] }.reverse.map do |item|
+    date = item["date"]
+    Date.iso8601(date.length == 7 ? "#{date}-01" : date).strftime("[%b %Y]")
+  end
+  verify.call(page.css("time").map(&:text) == labels, "Dates must display consistent month labels")
+  verify.call(page.at_css(".profile-news-scroll[tabindex='0'][role='region'][aria-label='News list']"), "News list must be keyboard-scrollable")
   verify.call(page.css(".profile-news__text strong").length == count, "Markdown emphasis not rendered")
   verify.call(page.css(".profile-news__text a[href='#vlan']").length == count, "Markdown links not rendered")
-  next unless count > 3
-
-  verify.call(page.at_css("details")["open"].nil?, "Earlier news should start collapsed")
-  verify.call(page.at_css("details > summary"), "Archive needs a native keyboard-accessible summary")
-  verify.call(page.css("details ol[start='4'] li").length == count - 3, "Wrong archived entry count")
 end
 
 puts "#{checks} news checks passed."

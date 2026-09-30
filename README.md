@@ -5,12 +5,17 @@
 
 ## Updating Homepage News
 
-Add entries to `news` in `_data/profile.yml`. Use a quoted event month (`YYYY-MM`)
-and a short English `text` with optional Markdown links and bold emphasis.
-News is sorted newest first, independently of publication preprint dates. The
-homepage shows the latest three entries; older entries expand in place. An empty
-list hides the section. For an in-page paper link such as `#occstress`, use the
-matching publication's `id`.
+Add entries to `news` in `_data/profile.yml`. Use a quoted event date (`YYYY-MM-DD`),
+or just `YYYY-MM` when the day is unknown, and a short English `text` with optional
+Markdown links and bold emphasis. News is sorted newest first, independently of
+publication preprint dates; visible date labels consistently show the month.
+All entries remain in a compact, vertically scrollable list. An empty list hides
+the section. For an in-page paper link such as `#occstress`, use the matching
+publication's `id`.
+
+Publication lists on the homepage and Publications page also scroll within a
+viewport-relative height. Both lists are keyboard-focusable and fully expanded
+when printing. Height limits live in `_sass/layout/_profile.scss`.
 
 Build with `bundle exec jekyll build`, then run `bundle exec ruby scripts/verify_news.rb`
 to check the news rendering and publication links.

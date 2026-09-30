@@ -186,34 +186,40 @@
   .profile-page-heading h1 { font-size: 36px; font-weight: 600; line-height: 1.2; }
   .profile-page-heading .profile-kicker { font-size: 13px; color: var(--global-text-color-light); font-weight: 500; }
 
-  .profile-news { margin: 0 0 40px; padding: 0; border: 0; }
-  .profile-news .profile-section-title { font-size: 27px; margin-bottom: 16px; }
+  .profile-scroll {
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: var(--global-text-color-light) transparent;
+    scroll-padding-block: 12px;
+    &:focus-visible { outline: 2px solid var(--profile-accent-color); outline-offset: 4px; }
+    &::-webkit-scrollbar { width: 6px; }
+    &::-webkit-scrollbar-thumb { background: var(--global-text-color-light); border-radius: 3px; }
+  }
+
+  .profile-news { margin: 0 0 28px; padding: 0; border: 0; scroll-margin-top: 88px; }
+  .profile-news .profile-section-title { font-size: 20px; margin-bottom: 8px; }
+  .profile-news-scroll { max-height: 144px; padding-right: 12px; }
   .profile-news-list {
     margin: 0;
     padding: 0;
     list-style: none;
-    li { display: grid; gap: 4px; margin: 0; padding: 6px 0; }
-    time { padding-top: 2px; color: var(--global-text-color-light); font-size: 13px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    li { margin: 0; padding: 3px 0; font-size: 15px; line-height: 1.6; overflow-wrap: anywhere; }
+    time { margin-right: 6px; color: var(--global-text-color-light); font-size: 13px; font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
   }
   .profile-news__text {
-    min-width: 0;
-    overflow-wrap: anywhere;
-    p { margin: 0; font-size: 15px; line-height: 1.6; }
-    strong { color: var(--profile-accent-color-alt); font-weight: 600; }
-  }
-  .profile-news-archive {
-    margin-top: 4px;
-    summary { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--profile-accent-color); font-size: 14px; cursor: pointer; list-style: none; }
-    summary::-webkit-details-marker { display: none; }
-    summary i { font-size: 10px; }
-    .profile-news-archive__hide { display: none; }
-    &[open] {
-      .profile-news-archive__show { display: none; }
-      .profile-news-archive__hide { display: inline; }
-      summary i { transform: rotate(180deg); }
-    }
+    display: inline;
+    p { display: inline; margin: 0; font-size: 15px; line-height: inherit; }
+    strong { color: inherit; font-weight: 600; }
   }
 
+  .profile-publication-scroll {
+    max-height: 640px;
+    max-height: unquote("min(640px, 70svh)");
+    margin-left: -16px;
+    padding: 0 12px 0 16px;
+  }
   .profile-publication-list { gap: 0; }
   .profile-publication {
     scroll-margin-top: 88px;
@@ -301,8 +307,6 @@
   .page__footer .fa-github { color: inherit; }
 
   @media (min-width: 640px) {
-    .profile-news-list li { grid-template-columns: 80px minmax(0, 1fr); gap: 16px; }
-    .profile-news-archive summary { margin-left: 96px; }
     .profile-publication { grid-template-columns: 240px minmax(0, 1fr); gap: 24px; }
     .profile-publication__body { grid-column: 2; }
     .profile-timeline li { display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 0 20px; }
@@ -371,8 +375,8 @@
     .profile-section--publications, .profile-section--compact { margin-top: 0; padding-top: 0; }
     .profile-section-title { font-size: 21px; margin-bottom: 16px; }
     .profile-section--publications .profile-section-title { font-size: 25px; }
-    .profile-news { margin: 0 0 32px; padding: 0; }
-    .profile-news .profile-section-title { font-size: 25px; margin-bottom: 12px; }
+    .profile-news { margin: 0 0 28px; padding: 0; }
+    .profile-publication-scroll { max-height: 560px; max-height: unquote("min(560px, 65svh)"); margin-left: -12px; padding-left: 12px; }
     .profile-publication { gap: 16px; }
     .profile-publication--featured::before { left: -10px; }
     .profile-publication__media { max-width: 100%; aspect-ratio: 16 / 9; }
@@ -384,6 +388,9 @@
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
+  @media print {
+    .profile-scroll { max-height: none; overflow: visible; scrollbar-gutter: auto; }
   }
 }
 
