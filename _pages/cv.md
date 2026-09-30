@@ -32,7 +32,7 @@ redirect_from:
 ## Professional Activities
 
 - Conference reviewer for ICLR and IROS.
-- Journal reviewer for RAL.
+- Journal reviewer for IEEE RA-L.
 - Workshop organizer, **Assistive Agents for All**, UbiComp 2026. [[website]](https://insailab.org/ubicomp2026-aaa-workshop/)
 
 ## Internship
@@ -47,7 +47,7 @@ redirect_from:
 
 ## Patents
 
-- **2026 · Chinese Invention Patent · Grant Notice Issued** · *Intelligent Navigation Method, Apparatus, Equipment, and Medium for Agricultural Machinery*. Application No. 202610729267.7. Filed May 26, 2026; grant notice issued September 8, 2026; registration pending. Applicant: 杭州旷域智能科技有限公司.
+- **2026 · Chinese Invention Patent · Granted** · *Intelligent Navigation Method, Apparatus, Equipment, and Medium for Agricultural Machinery*. Application No. 202610729267.7. Filed May 26, 2026. Assignee: 杭州旷域智能科技有限公司.
 
 - **2026 · Chinese Invention Patent · Granted** · *Coordinated Path and Height Planning System for a Height-Adjustable Wheeled-Legged Robot in Weeding*. Inventors: **Y. Zheng**, J. Gao. Patent No. ZL 2026 1 0943575.X; publication No. CN 122439517 B. Filed June 29, 2026; granted August 28, 2026. Assignee: 杭州旷域智能科技有限公司.
 
