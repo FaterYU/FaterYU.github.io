@@ -3,6 +3,18 @@
 
 ![Academic Pages template example](images/homepage.png "Academic Pages template example")
 
+## Updating Homepage News
+
+Add entries to `news` in `_data/profile.yml`. Use a quoted event month (`YYYY-MM`)
+and a short English `text` with optional Markdown links and bold emphasis.
+News is sorted newest first, independently of publication preprint dates. The
+homepage shows the latest three entries; older entries expand in place. An empty
+list hides the section. For an in-page paper link such as `#occstress`, use the
+matching publication's `id`.
+
+Build with `bundle exec jekyll build`, then run `bundle exec ruby scripts/verify_news.rb`
+to check the news rendering and publication links.
+
 # Getting Started
 
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)

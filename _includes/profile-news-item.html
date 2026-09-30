@@ -1,0 +1,4 @@
+<li>
+  <time datetime="{{ include.item.date | escape }}">{{ include.item.date | append: '-01' | date: '%b %Y' }}</time>
+  <div class="profile-news__text">{{ include.item.text | markdownify }}</div>
+</li>

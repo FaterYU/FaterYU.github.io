@@ -1,0 +1,25 @@
+{% if include.news.size > 0 %}
+{% assign news = include.news | sort: 'date' | reverse %}
+<section class="profile-section profile-news" id="news" aria-labelledby="news-heading">
+  <h2 class="profile-section-title" id="news-heading">News</h2>
+  <ol class="profile-news-list">
+    {% for item in news limit:3 %}
+      {% include profile-news-item.html item=item %}
+    {% endfor %}
+  </ol>
+  {% if news.size > 3 %}
+  <details class="profile-news-archive">
+    <summary>
+      <span class="profile-news-archive__show">Show earlier news</span>
+      <span class="profile-news-archive__hide">Hide earlier news</span>
+      <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+    </summary>
+    <ol class="profile-news-list" start="4">
+      {% for item in news offset:3 %}
+        {% include profile-news-item.html item=item %}
+      {% endfor %}
+    </ol>
+  </details>
+  {% endif %}
+</section>
+{% endif %}

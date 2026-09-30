@@ -50,6 +50,8 @@ redirect_from:
   </div>
 </section>
 
+{% include profile-news.html news=profile.news %}
+
 <section class="profile-section profile-section--publications" id="publications" tabindex="-1" aria-labelledby="publications-heading">
   <h2 class="profile-section-title" id="publications-heading">Publications</h2>
   <div class="profile-publication-list">

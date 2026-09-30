@@ -6,12 +6,18 @@ research_interests:
   - World Models
   - Multimodal Agents
 
+news:
+  # Use the event month (YYYY-MM), independently of publication preprint dates.
+  - date: "2026-09"
+    text: "[OccStress](#occstress) and [VLAN](#vlan) accepted to **NeurIPS 2026**."
+
 publications:
   # Sort by first preprint month when available; acceptance does not change order.
   # These two entries temporarily use the acceptance month until preprint dates are available.
   - venue: "NeurIPS 2026"
     sort_month: "2026-09"
     title: "VLAN: Vision-Language Accessible Navigation"
+    id: "vlan"
     authors:
       - name: "J. Hu"
       - name: "Y. Zheng"
@@ -24,6 +30,7 @@ publications:
   - venue: "NeurIPS 2026"
     sort_month: "2026-09"
     title: "OccStress: Stress-Testing the 4D Occupancy Forecasting Chain"
+    id: "occstress"
     authors:
       - name: "Y. Zheng"
         highlight: true
