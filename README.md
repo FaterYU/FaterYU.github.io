@@ -20,6 +20,18 @@ when printing. Height limits live in `_sass/layout/_profile.scss`.
 Build with `bundle exec jekyll build`, then run `bundle exec ruby scripts/verify_news.rb`
 to check the news rendering and publication links.
 
+## Visitor Statistics
+
+The sidebar uses MapMyVisitors' official image-based widget in
+`_includes/visitor-map.html`, linked to this site's statistics dashboard.
+The image loads eagerly, even below the fold, so counting does not depend on
+scrolling or JavaScript. Local previews also make tracking requests.
+
+The old Globe widget was removed because its JSONP callback returned HTML instead
+of JavaScript. The image widget was verified against the account's visit count.
+After building, run `bundle exec ruby scripts/verify_visitors.rb` to check the
+embed on each profile page. This offline check does not generate visits.
+
 # Getting Started
 
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)

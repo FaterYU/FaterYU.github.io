@@ -122,11 +122,12 @@
     border-color: var(--profile-border-color);
   }
 
-  .visitor-globe {
-    width: 160px;
-    height: 184px;
+  .visitor-map {
+    width: 180px;
+    max-width: 100%;
     margin: 24px auto 0;
-    iframe { display: block; width: 100%; height: 100%; border: 0; }
+    a { display: block; }
+    img { display: block; width: 100%; height: auto; aspect-ratio: 180 / 88; border-radius: 4px; }
   }
 
   .profile-hero {
@@ -328,7 +329,7 @@
     #main { display: flex; flex-direction: column; margin-top: 32px; }
     .sidebar { display: contents; }
     &.profile-home .sidebar > [itemscope] { display: none; }
-    .visitor-globe { order: 1; flex: none; margin-top: 40px; }
+    .visitor-map { order: 1; flex: none; margin-top: 40px; }
     .sidebar > [itemscope] { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; align-items: center; gap: 12px; margin-bottom: 32px; }
     .sidebar .author__avatar { display: block; width: 52px; height: 52px; }
     .sidebar .author__avatar img { width: 52px; height: 52px; }
