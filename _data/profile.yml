@@ -162,12 +162,15 @@ education:
   - period: "2025 - Now"
     title: "M.S. in Electronic Information, Hunan University"
     detail: "Changsha, China."
+    logo: "/images/organizations/hunan-university.png"
   - period: "2021 - 2025"
     title: "B.S. in Software Engineering, South China Normal University"
     detail: "Guangzhou, China."
+    logo: "/images/organizations/scnu.png"
   - period: "2021 - 2025"
     title: "B.S. in Computing Science, University of Aberdeen"
     detail: "Aberdeen, United Kingdom."
+    logo: "/images/organizations/aberdeen.png"
 
 professional_activities:
   meta: "Academic Service"
@@ -181,9 +184,12 @@ internships:
   meta: "Industry and Research"
   title: "Internship experience"
   items:
-    - "Research Intern, Dept. PAIR, PolyU, Hong Kong, China."
-    - "Interface Development Intern, Dept. TEG, Tencent, Shenzhen, China."
-    - "Assistant Tutor, Dept. RoboMaster, DJI, Shenzhen, China."
+    - text: "Research Intern, Dept. PAIR, PolyU, Hong Kong, China."
+      logo: "/images/organizations/polyu.png"
+    - text: "Interface Development Intern, Dept. TEG, Tencent, Shenzhen, China."
+      logo: "/images/organizations/tencent.png"
+    - text: "Assistant Tutor, Dept. RoboMaster, DJI, Shenzhen, China."
+      logo: "/images/organizations/dji.png"
 
 projects_and_patents:
   meta: "Research Translation"
@@ -197,6 +203,10 @@ patents:
     status: "Granted"
     title: "Intelligent Navigation Method, Apparatus, Equipment, and Medium for Agricultural Machinery"
     official_title: "农业机械设备的智能化导航方法、装置、设备和介质"
+    inventors:
+      - name: "Y. Zheng"
+        highlight: true
+      - name: "J. Gao"
     application_no: "202610729267.7"
     application_date: "May 26, 2026"
     grant_notice_date: "September 8, 2026"

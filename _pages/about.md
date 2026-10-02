@@ -16,7 +16,6 @@ redirect_from:
   <div class="profile-identity">
     <img class="profile-mobile-avatar" src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="" width="80" height="80">
     <div>
-      <p class="profile-eyebrow">Master's student · Hunan University</p>
       <h1>Yu Zheng <span lang="zh">郑誉</span></h1>
     </div>
   </div>
@@ -27,15 +26,13 @@ redirect_from:
     {% endfor %}
   </ul>
   <div class="profile-actions">
-    <a class="profile-button profile-button--primary" href="#publications">Publications <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
-    <a class="profile-button profile-button--secondary" href="mailto:{{ site.author.email }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
-  </div>
-  <div class="profile-mobile-links">
-    <a href="{{ site.author.googlescholar }}">Google Scholar</a>
-    <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+    <a class="profile-action" href="#publications">Publications <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+    <a class="profile-action" href="mailto:{{ site.author.email }}">Email</a>
+    <a class="profile-action profile-action--mobile" href="{{ site.author.googlescholar }}" aria-label="Google Scholar">Scholar</a>
     <details class="profile-contact-menu">
       <summary>More <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary>
       <ul>
+        <li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>
         {% if site.author.linkedin %}
           <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a></li>
         {% endif %}
@@ -52,22 +49,30 @@ redirect_from:
 
 {% include profile-news.html news=profile.news %}
 
-<section class="profile-section">
+<section class="profile-section" id="education">
   <h2 class="profile-section-title">Education</h2>
   <ol class="profile-timeline">
     {% for item in profile.education %}
       <li>
-        <span>{{ item.period }}</span>
-        <strong>{{ item.title }}</strong>
-        <p>{{ item.detail }}</p>
+        <span class="profile-education-period">{{ item.period }}</span>
+        <div class="profile-organization-logo">
+          {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="" width="72" height="64" loading="lazy" decoding="async">{% endif %}
+        </div>
+        <div class="profile-education-detail">
+          <strong>{{ item.title }}</strong>
+          <p>{{ item.detail }}</p>
+        </div>
       </li>
     {% endfor %}
   </ol>
 </section>
 
 <section class="profile-section profile-section--publications" id="publications" tabindex="-1" aria-labelledby="publications-heading">
-  <h2 class="profile-section-title" id="publications-heading">Publications</h2>
-  <div class="profile-scroll profile-publication-scroll" tabindex="0" role="region" aria-label="Publication list">
+  <div class="profile-scroll-heading">
+    <h2 class="profile-section-title" id="publications-heading">Publications</h2>
+    {% include profile-scroll-hint.html target="publication-list" %}
+  </div>
+  <div class="profile-scroll profile-publication-scroll" id="publication-list" tabindex="0" role="region" aria-label="Publication list">
     <div class="profile-publication-list">
       {% assign publications = profile.publications | where_exp: "publication", "publication.hidden != true" | sort: 'sort_month' | reverse %}
       {% for publication in publications %}
@@ -87,12 +92,17 @@ redirect_from:
   </ul>
 </section>
 
-<section class="profile-section">
+<section class="profile-section" id="internship">
   <h2 class="profile-section-title">Internship</h2>
   {% assign internship = profile.internships %}
-  <ul class="profile-record-list" aria-label="{{ internship.title }}">
+  <ul class="profile-record-list profile-internship-list" aria-label="{{ internship.title }}">
     {% for item in internship.items %}
-      <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+      <li>
+        <div class="profile-organization-logo">
+          {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="" width="72" height="64" loading="lazy" decoding="async">{% endif %}
+        </div>
+        <div>{{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+      </li>
     {% endfor %}
   </ul>
 </section>
@@ -124,9 +134,11 @@ redirect_from:
           {% endfor %}
         </p>
         {% endif %}
-        <p class="profile-patent__details">
-          {% if patent.patent_no %}Patent No. {{ patent.patent_no }}{% elsif patent.application_no %}Application No. {{ patent.application_no }}{% endif %}{% if patent.publication_no %} · Publication No. {{ patent.publication_no }}{% endif %}{% if patent.granted_date %} · Granted {{ patent.granted_date }}{% elsif patent.grant_notice_date and patent.status != 'Granted' %} · Grant notice {{ patent.grant_notice_date }} · Registration pending{% endif %}
-        </p>
+        {% if patent.granted_date %}
+          <p class="profile-patent__details">Granted {{ patent.granted_date }}</p>
+        {% elsif patent.grant_notice_date and patent.status != 'Granted' %}
+          <p class="profile-patent__details">Grant notice {{ patent.grant_notice_date }} · Registration pending</p>
+        {% endif %}
       </article>
     {% endfor %}
   </div>

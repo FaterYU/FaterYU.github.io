@@ -35,6 +35,17 @@ verify.call(home.css(".profile-section-title").map(&:text).take(3) == ["News", "
   page = Nokogiri::HTML(File.read(File.join(root, "_site", path)))
   scroll = page.at_css(".profile-publication-scroll[tabindex='0'][role='region'][aria-label='Publication list']")
   verify.call(scroll, "Missing keyboard-accessible publication scroll area: #{path}")
+  page.css(".profile-scroll").each do |region|
+    id = region["id"]
+    verify.call(id && page.css("[id='#{id}']").length == 1, "Scroll region needs a unique identifier: #{path}")
+    hints = page.css(".profile-scroll-hint[data-scroll-target='#{id}']")
+    verify.call(hints.length == 1, "Scroll region needs exactly one indicator: #{path} #{id}")
+    hint = hints.first
+    verify.call(hint.key?("hidden"), "Only show scroll hints after detecting overflow")
+    verify.call(hint["title"] == "Scroll within this list", "Scroll icon needs a tooltip")
+    verify.call(hint["aria-hidden"] == "true", "Decorative scroll icon must not change the accessible heading")
+    verify.call(hint.at_css(".fa-arrows-up-down"), "Scroll indicator must use the existing icon set")
+  end
   publications = profile.fetch("publications").reject { |paper| paper["hidden"] == true }.sort_by { |paper| paper.fetch("sort_month") }.reverse
   verify.call(scroll.css(".profile-publication h2, .profile-publication h3").map(&:text) == publications.map { |paper| paper.fetch("title") }, "Scrolling must retain all visible publications in order: #{path}")
 end

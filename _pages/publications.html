@@ -11,11 +11,14 @@ hide_title: true
 {% assign profile = site.data.profile %}
 
 <section class="profile-page-heading">
-  <h1>Publications</h1>
+  <div class="profile-scroll-heading">
+    <h1>Publications</h1>
+    {% include profile-scroll-hint.html target="publication-list" %}
+  </div>
 </section>
 
 <section class="profile-section profile-section--compact">
-  <div class="profile-scroll profile-publication-scroll" tabindex="0" role="region" aria-label="Publication list">
+  <div class="profile-scroll profile-publication-scroll" id="publication-list" tabindex="0" role="region" aria-label="Publication list">
     <div class="profile-publication-list">
       {% assign publications = profile.publications | where_exp: "publication", "publication.hidden != true" | sort: 'sort_month' | reverse %}
       {% for publication in publications %}

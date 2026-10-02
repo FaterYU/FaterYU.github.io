@@ -1,0 +1,23 @@
+# Official assets used to identify educational and internship affiliations.
+# Logos remain the property of their respective organizations.
+hunan-university.png:
+  page: https://100.hnu.edu.cn/bsxz1/bsxz.htm
+  source: https://100.hnu.edu.cn/bsxz/xiaohui.zip
+  note: Vertical color logo, resized proportionally to 240px high.
+scnu.png:
+  page: https://www.scnu.edu.cn/a/20150906/2.html
+  source: https://statics.scnu.edu.cn/pics/scnuportal/2022/0324/1648114477960296.png
+aberdeen.png:
+  page: https://www.abdn.ac.uk/
+  source: https://www.abdn.ac.uk/abdn-design-system/releases/3.2.7/dist/images/icons/apple-touch-icon.png
+polyu.png:
+  page: https://www.polyu.edu.hk/
+  source: https://www.polyu.edu.hk/-/media/department/home/setting/favicon.ico?rev=3645ae56c1674f7ba7ff351ec16123df&hash=362CCC9C57A3CEBB5D28EEA507E98503
+  note: Official 64px emblem converted from ICO to PNG.
+tencent.png:
+  page: https://www.tencent.com/newsroom/media-resources/
+  source: https://www.tencent.com/wp-content/uploads/2022/12/03_Tencent_English-logo.png
+  note: Resized proportionally to 320px wide.
+dji.png:
+  page: https://www.dji.com/
+  source: https://www-cdn.djiits.com/dps/5622076973f439e11ffdac3c57b73558.png

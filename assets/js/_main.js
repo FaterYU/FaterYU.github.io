@@ -95,6 +95,45 @@ $(document).ready(function () {
     }
   });
 
+  // End the initial news viewport on a complete entry, including wrapped mobile text.
+  document.querySelectorAll(".profile-news-scroll").forEach(function (scroll) {
+    const list = scroll.querySelector(".profile-news-list");
+    if (!list || !list.children.length) return;
+    const compact = window.matchMedia("(max-width: 639px)");
+    const fitNews = function () {
+      const count = Math.min(list.children.length, compact.matches ? 3 : 5);
+      const first = list.children[0].getBoundingClientRect();
+      const last = list.children[count - 1].getBoundingClientRect();
+      scroll.style.setProperty("--profile-news-height", Math.ceil(last.bottom - first.top) + "px");
+    };
+    fitNews();
+    compact.addEventListener("change", fitNews);
+    if (window.ResizeObserver) {
+      new ResizeObserver(fitNews).observe(list);
+    } else {
+      window.addEventListener("resize", fitNews);
+    }
+  });
+
+  // Contain nested scrolling only when there is overflow; short lists leave the page free to scroll.
+  document.querySelectorAll(".profile-scroll").forEach(function (scroll) {
+    const hint = document.querySelector('[data-scroll-target="' + scroll.id + '"]');
+    const updateScrollable = function () {
+      const scrollable = scroll.scrollHeight > scroll.clientHeight + 1;
+      scroll.dataset.scrollable = String(scrollable);
+      if (hint) hint.hidden = !scrollable;
+    };
+    updateScrollable();
+    if (window.ResizeObserver) {
+      const observer = new ResizeObserver(updateScrollable);
+      observer.observe(scroll);
+      if (scroll.firstElementChild) observer.observe(scroll.firstElementChild);
+    } else {
+      window.addEventListener("resize", updateScrollable);
+      scroll.addEventListener("load", updateScrollable, true);
+    }
+  });
+
   // Restore the follow menu if toggled on a window resize
   jQuery(window).on('resize', function () {
     $(".author__urls-wrapper").each(function () {

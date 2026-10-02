@@ -1,8 +1,11 @@
 {% if include.news.size > 0 %}
 {% assign news = include.news | sort: 'date' | reverse %}
 <section class="profile-section profile-news" id="news" aria-labelledby="news-heading">
-  <h2 class="profile-section-title" id="news-heading">News</h2>
-  <div class="profile-scroll profile-news-scroll" tabindex="0" role="region" aria-label="News list">
+  <div class="profile-scroll-heading">
+    <h2 class="profile-section-title" id="news-heading">News</h2>
+    {% include profile-scroll-hint.html target="news-list" %}
+  </div>
+  <div class="profile-scroll profile-news-scroll" id="news-list" tabindex="0" role="region" aria-label="News list">
     <ol class="profile-news-list" role="list">
       {% for item in news %}
         {% include profile-news-item.html item=item %}
