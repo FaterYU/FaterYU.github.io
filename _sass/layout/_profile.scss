@@ -178,7 +178,7 @@
 
   .profile-section { margin: 40px 0 0; padding-top: 28px; border-top: 1px solid var(--profile-border-color); }
   .profile-section-title { margin: 0 0 20px; padding: 0; font-size: 23px; font-weight: 600; line-height: 1.25; }
-  .profile-section--publications { margin-top: 0; padding-top: 0; border: 0; scroll-margin-top: 88px; }
+  .profile-section--publications { margin-top: 40px; padding-top: 0; border: 0; scroll-margin-top: 88px; }
   .profile-section--publications:focus { outline: none; }
   .profile-section--publications:focus-visible > .profile-section-title { text-decoration: underline; text-decoration-color: var(--profile-accent-color); text-underline-offset: 6px; }
   .profile-section--publications .profile-section-title { font-size: 27px; margin-bottom: 4px; }
@@ -200,18 +200,18 @@
   }
 
   .profile-news { margin: 0 0 28px; padding: 0; border: 0; scroll-margin-top: 88px; }
-  .profile-news .profile-section-title { font-size: 20px; margin-bottom: 8px; }
+  .profile-news .profile-section-title { margin-bottom: 8px; }
   .profile-news-scroll { max-height: 144px; padding-right: 12px; }
   .profile-news-list {
     margin: 0;
     padding: 0;
     list-style: none;
-    li { margin: 0; padding: 3px 0; font-size: 15px; line-height: 1.6; overflow-wrap: anywhere; }
-    time { margin-right: 6px; color: var(--global-text-color-light); font-size: 13px; font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    li { margin: 0; padding: 3px 0; line-height: 1.6; overflow-wrap: anywhere; }
+    time { margin-right: 6px; color: var(--global-text-color-light); font-size: inherit; font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
   }
   .profile-news__text {
     display: inline;
-    p { display: inline; margin: 0; font-size: 15px; line-height: inherit; }
+    p { display: inline; margin: 0; font-size: inherit; line-height: inherit; }
     strong { color: inherit; font-weight: 600; }
   }
 
@@ -373,7 +373,8 @@
     .profile-focus-list { margin-bottom: 20px; li { font-size: 12px; } }
     .profile-hero { margin-bottom: 28px; }
     .profile-section { margin-top: 32px; padding-top: 24px; }
-    .profile-section--publications, .profile-section--compact { margin-top: 0; padding-top: 0; }
+    .profile-section--publications { margin-top: 32px; padding-top: 0; }
+    .profile-section--compact { margin-top: 0; padding-top: 0; }
     .profile-section-title { font-size: 21px; margin-bottom: 16px; }
     .profile-section--publications .profile-section-title { font-size: 25px; }
     .profile-news { margin: 0 0 28px; padding: 0; }

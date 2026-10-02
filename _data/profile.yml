@@ -21,7 +21,7 @@ news:
     text: "One Chinese invention patent granted."
   # Use the workshop's published CFP release date for this announcement.
   - date: "2026-05-18"
-    text: "Co-organizing a [workshop](https://insailab.org/ubicomp2026-aaa-workshop/) at **UbiComp 2026**."
+    text: "Organizing a [workshop AAA](https://insailab.org/ubicomp2026-aaa-workshop/) at **UbiComp 2026**."
   - date: "2026-05"
     text: "Serving as a reviewer for **IEEE RA-L**."
   - date: "2026-05-01"
@@ -38,12 +38,17 @@ publications:
     id: "vlan"
     authors:
       - name: "J. Hu"
+        equal: true
       - name: "Y. Zheng"
         highlight: true
+        equal: true
       - name: "W. Wu"
       - name: "W. Feng"
       - name: "C. Cheng"
       - name: "J. Zhang"
+        corresponding: true
+    image: "/images/publications/vlan-overview.png"
+    image_alt: "VLAN overview showing accessible navigation paths and obstacle accessibility across different users and robots"
     featured: true
   - venue: "NeurIPS 2026"
     sort_month: "2026-09"
@@ -52,12 +57,17 @@ publications:
     authors:
       - name: "Y. Zheng"
         highlight: true
+        equal: true
       - name: "J. Hu"
+        equal: true
       - name: "J. Xiong"
       - name: "R. Liu"
       - name: "J. Zheng"
       - name: "K. Yang"
       - name: "J. Zhang"
+        corresponding: true
+    image: "/images/publications/occstress-overview.png"
+    image_alt: "OccStress overview showing upstream and controlled occupancy corruptions and their propagation through the 4D occupancy forecasting chain"
     featured: true
   - venue: "arXiv 2026"
     sort_month: "2026-08"
@@ -163,9 +173,9 @@ professional_activities:
   meta: "Academic Service"
   title: "Reviewer and workshop organizer"
   items:
-    - "Conference reviewer for ICLR and IROS."
-    - "Journal reviewer for IEEE RA-L."
-    - "Organizer of the UbiComp 2026 workshop [Assistive Agents for All](https://insailab.org/ubicomp2026-aaa-workshop/)."
+    - "Conference reviewer for **ICLR** and **IROS**."
+    - "Journal reviewer for **IEEE RA-L**."
+    - "Organizer of the **UbiComp 2026** workshop [Assistive Agents for All](https://insailab.org/ubicomp2026-aaa-workshop/)."
 
 internships:
   meta: "Industry and Research"

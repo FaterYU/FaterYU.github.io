@@ -29,6 +29,8 @@ if entries.any?
   verify.call(sections.map { |section| section["class"].split.last } == ["profile-hero", "profile-news", "profile-section--publications"], "News must sit between the introduction and publications")
 end
 
+verify.call(home.css(".profile-section-title").map(&:text).take(3) == ["News", "Education", "Publications"], "Education must sit between News and Publications")
+
 %w[index.html publications/index.html].each do |path|
   page = Nokogiri::HTML(File.read(File.join(root, "_site", path)))
   scroll = page.at_css(".profile-publication-scroll[tabindex='0'][role='region'][aria-label='Publication list']")

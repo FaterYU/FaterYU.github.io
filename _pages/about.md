@@ -52,18 +52,6 @@ redirect_from:
 
 {% include profile-news.html news=profile.news %}
 
-<section class="profile-section profile-section--publications" id="publications" tabindex="-1" aria-labelledby="publications-heading">
-  <h2 class="profile-section-title" id="publications-heading">Publications</h2>
-  <div class="profile-scroll profile-publication-scroll" tabindex="0" role="region" aria-label="Publication list">
-    <div class="profile-publication-list">
-      {% assign publications = profile.publications | where_exp: "publication", "publication.hidden != true" | sort: 'sort_month' | reverse %}
-      {% for publication in publications %}
-        {% include profile-publication-card.html publication=publication heading="h3" hide_description=true compact=true %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 <section class="profile-section">
   <h2 class="profile-section-title">Education</h2>
   <ol class="profile-timeline">
@@ -75,6 +63,18 @@ redirect_from:
       </li>
     {% endfor %}
   </ol>
+</section>
+
+<section class="profile-section profile-section--publications" id="publications" tabindex="-1" aria-labelledby="publications-heading">
+  <h2 class="profile-section-title" id="publications-heading">Publications</h2>
+  <div class="profile-scroll profile-publication-scroll" tabindex="0" role="region" aria-label="Publication list">
+    <div class="profile-publication-list">
+      {% assign publications = profile.publications | where_exp: "publication", "publication.hidden != true" | sort: 'sort_month' | reverse %}
+      {% for publication in publications %}
+        {% include profile-publication-card.html publication=publication heading="h3" hide_description=true compact=true %}
+      {% endfor %}
+    </div>
+  </div>
 </section>
 
 <section class="profile-section">
