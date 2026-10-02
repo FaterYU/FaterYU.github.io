@@ -33,7 +33,6 @@ publications:
   # Sort by first preprint month when available; acceptance does not change order.
   # These two entries temporarily use the acceptance month until preprint dates are available.
   - venue: "NeurIPS 2026"
-    venue_url: "https://neurips.cc/virtual/2026/poster/138986"
     sort_month: "2026-09"
     title: "VLAN: Vision-Language Accessible Navigation"
     id: "vlan"
@@ -51,8 +50,10 @@ publications:
     image: "/images/publications/vlan-overview.png"
     image_alt: "VLAN overview showing accessible navigation paths and obstacle accessibility across different users and robots"
     featured: true
+    links:
+      - label: "Conf. Page"
+        url: "https://neurips.cc/virtual/2026/poster/138986"
   - venue: "NeurIPS 2026"
-    venue_url: "https://neurips.cc/virtual/2026/poster/139118"
     sort_month: "2026-09"
     title: "OccStress: Stress-Testing the 4D Occupancy Forecasting Chain"
     id: "occstress"
@@ -71,6 +72,9 @@ publications:
     image: "/images/publications/occstress-overview.png"
     image_alt: "OccStress overview showing upstream and controlled occupancy corruptions and their propagation through the 4D occupancy forecasting chain"
     featured: true
+    links:
+      - label: "Conf. Page"
+        url: "https://neurips.cc/virtual/2026/poster/139118"
   - venue: "arXiv 2026"
     sort_month: "2026-08"
     title: "Beyond Gene Reconstruction: Learning Cell Representations through Complementary Transcriptomic Views"
@@ -93,7 +97,6 @@ publications:
       - label: "Paper"
         url: "https://arxiv.org/abs/2608.00985"
   - venue: "ICML 2026 · Spotlight"
-    venue_url: "https://icml.cc/virtual/2026/poster/67129"
     sort_month: "2026-05"
     title: "Position: Assistive Agents Need Accessibility Alignment"
     authors:
@@ -112,6 +115,8 @@ publications:
     links:
       - label: "Paper"
         url: "https://arxiv.org/abs/2605.13579"
+      - label: "Conf. Page"
+        url: "https://icml.cc/virtual/2026/poster/67129"
   - venue: "AACL-IJCNLP 2026"
     sort_month: "2026-03"
     title: "DEAF: A Benchmark for Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models"

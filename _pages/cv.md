@@ -26,7 +26,7 @@ redirect_from:
 
 {% assign publications = site.data.profile.publications | where_exp: "publication", "publication.hidden != true" | sort: 'sort_month' | reverse %}
 {% for publication in publications %}
-- **{% if publication.venue_url %}[{{ publication.venue }}]({{ publication.venue_url }}){% else %}{{ publication.venue }}{% endif %}** · {{ publication.title }}. {% for link in publication.links %}[[{{ link.label | downcase }}]]({{ link.url }}) {% endfor %}
+- **{{ publication.venue }}** · {{ publication.title }}. {% for link in publication.links %}[[{{ link.label }}]]({{ link.url }}) {% endfor %}
 {% endfor %}
 
 ## Professional Activities
