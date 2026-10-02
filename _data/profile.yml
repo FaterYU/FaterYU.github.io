@@ -33,6 +33,7 @@ publications:
   # Sort by first preprint month when available; acceptance does not change order.
   # These two entries temporarily use the acceptance month until preprint dates are available.
   - venue: "NeurIPS 2026"
+    venue_url: "https://neurips.cc/virtual/2026/poster/138986"
     sort_month: "2026-09"
     title: "VLAN: Vision-Language Accessible Navigation"
     id: "vlan"
@@ -51,6 +52,7 @@ publications:
     image_alt: "VLAN overview showing accessible navigation paths and obstacle accessibility across different users and robots"
     featured: true
   - venue: "NeurIPS 2026"
+    venue_url: "https://neurips.cc/virtual/2026/poster/139118"
     sort_month: "2026-09"
     title: "OccStress: Stress-Testing the 4D Occupancy Forecasting Chain"
     id: "occstress"
