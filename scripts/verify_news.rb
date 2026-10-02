@@ -48,6 +48,19 @@ verify.call(home.css(".profile-section-title").map(&:text).take(3) == ["News", "
   end
   publications = profile.fetch("publications").reject { |paper| paper["hidden"] == true }.sort_by { |paper| paper.fetch("sort_month") }.reverse
   verify.call(scroll.css(".profile-publication h2, .profile-publication h3").map(&:text) == publications.map { |paper| paper.fetch("title") }, "Scrolling must retain all visible publications in order: #{path}")
+  scroll.css(".profile-publication").zip(publications).each do |card, paper|
+    venue_links = card.css(".profile-publication__meta a")
+    verify.call(venue_links.map { |link| link["href"] } == [paper["venue_url"]].compact, "Venue link differs from profile data: #{path}")
+    verify.call(card.at_css(".profile-publication__meta").text == paper.fetch("venue"), "Venue label changed: #{path}")
+    verify.call(card.css(".profile-link-row a").map { |link| link["href"] } == paper.fetch("links", []).map { |link| link.fetch("url") }, "Keep paper links separate from venue links: #{path}")
+  end
+end
+
+cv = Nokogiri::HTML(File.read(File.join(root, "_site/cv/index.html")))
+profile.fetch("publications").reject { |paper| paper["hidden"] }.each do |paper|
+  next unless paper["venue_url"]
+  link = cv.at_css("a[href='#{paper.fetch('venue_url')}']")
+  verify.call(link && link.text == paper.fetch("venue"), "CV venue link differs from profile data")
 end
 
 # Exercise empty, long and mixed-precision lists without changing profile data.

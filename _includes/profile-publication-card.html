@@ -7,7 +7,7 @@
     </figure>
   {% endif %}
   <div class="profile-publication__body">
-    {% if publication.venue %}<p class="profile-publication__meta">{{ publication.venue }}</p>{% endif %}
+    {% if publication.venue %}<p class="profile-publication__meta">{% if publication.venue_url %}<a href="{{ publication.venue_url | escape }}" title="Conference page">{{ publication.venue }}</a>{% else %}{{ publication.venue }}{% endif %}</p>{% endif %}
     <{{ include.heading | default: "h3" }}>{{ publication.title }}</{{ include.heading | default: "h3" }}>
     {% if publication.authors %}
       <p class="profile-publication__authors">
