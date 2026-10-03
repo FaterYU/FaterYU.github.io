@@ -143,6 +143,10 @@ publications:
     links:
       - label: "Paper"
         url: "https://arxiv.org/abs/2603.18048"
+      - label: "Code"
+        url: "https://github.com/kikixiong/deaf"
+      - label: "Dataset"
+        url: "https://huggingface.co/datasets/Wonder239/DEAF"
   - venue: "arXiv 2025"
     sort_month: "2025-12"
     title: "OccSTeP: Benchmarking 4D Occupancy Spatio-Temporal Persistence"
