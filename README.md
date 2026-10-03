@@ -20,6 +20,18 @@ when printing. Height limits live in `_sass/layout/_profile.scss`.
 Build with `bundle exec jekyll build`, then run `bundle exec ruby scripts/verify_news.rb`
 to check the news rendering and publication links.
 
+## Homepage Presentation
+
+Internship entries in `_data/profile.yml` use `organization`, `role`,
+`department`, `location`, and `logo`. Use `logo_style: "emblem"` for a compact
+square mark; wordmarks use the full logo slot. Keep unknown dates omitted.
+
+After changing homepage interactions, run `npm run build:js`, build Jekyll, then
+run `node scripts/verify_profile_interactions.cjs` and
+`bundle exec ruby scripts/verify_profile_layout.rb`. Scroll edge fades and figure
+previews respect reduced-motion preferences. Edge fades and zoom icons are hidden
+when printing.
+
 ## Visitor Statistics
 
 The sidebar uses MapMyVisitors' official image-based widget in

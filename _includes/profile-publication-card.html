@@ -1,8 +1,9 @@
 <article{% if publication.id %} id="{{ publication.id | escape }}" tabindex="-1"{% endif %} class="profile-publication{% if include.compact %} profile-publication--compact{% endif %}{% if publication.featured %} profile-publication--featured{% endif %}">
   {% if publication.image %}
     <figure class="profile-publication__media">
-      <a class="image-popup" href="{{ publication.image | relative_url }}" aria-label="View figure: {{ publication.title | escape }}" title="View figure">
+      <a class="image-popup" href="{{ publication.image | relative_url }}" aria-label="View figure: {{ publication.title | escape }}" title="View figure" data-figure-title="{{ publication.title | escape }}">
         <img src="{{ publication.image | relative_url }}" alt="{{ publication.image_alt | default: publication.title }}" loading="lazy" decoding="async">
+        <span class="profile-figure-zoom" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
       </a>
     </figure>
   {% endif %}

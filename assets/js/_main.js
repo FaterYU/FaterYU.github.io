@@ -3,6 +3,8 @@
    ========================================================================== */
 
 $(document).ready(function () {
+  const profilePage = document.body.classList.contains("profile-site");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   // detect OS/browser preference
   const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches
     ? 'dark'
@@ -118,12 +120,22 @@ $(document).ready(function () {
   // Contain nested scrolling only when there is overflow; short lists leave the page free to scroll.
   document.querySelectorAll(".profile-scroll").forEach(function (scroll) {
     const hint = document.querySelector('[data-scroll-target="' + scroll.id + '"]');
+    const frame = scroll.closest(".profile-scroll-frame");
+    const updateEdges = function () {
+      if (!frame) return;
+      const end = Math.max(0, scroll.scrollHeight - scroll.clientHeight);
+      const position = Math.max(0, Math.min(scroll.scrollTop, end));
+      frame.dataset.scrollUp = String(end > 1 && position > 1);
+      frame.dataset.scrollDown = String(end > 1 && position < end - 1);
+    };
     const updateScrollable = function () {
       const scrollable = scroll.scrollHeight > scroll.clientHeight + 1;
       scroll.dataset.scrollable = String(scrollable);
       if (hint) hint.hidden = !scrollable;
+      updateEdges();
     };
     updateScrollable();
+    scroll.addEventListener("scroll", updateEdges, { passive: true });
     if (window.ResizeObserver) {
       const observer = new ResizeObserver(updateScrollable);
       observer.observe(scroll);
@@ -186,18 +198,25 @@ $(document).ready(function () {
     },
     image: {
       tError: '<a href="%url%">Image #%curr%</a> could not be loaded.',
+      titleSrc: profilePage ? function (item) {
+        const title = item.el.attr("data-figure-title") || item.el.attr("title") || "";
+        return $("<span>").text(title).html();
+      } : 'title'
     },
-    removalDelay: 500, // Delay in milliseconds before popup is removed
-    // Class that is added to body when popup is open.
-    // make it unique to apply your CSS animations just to this exact popup
-    mainClass: 'mfp-zoom-in',
+    removalDelay: profilePage ? 200 : 500,
+    mainClass: profilePage ? 'profile-image-preview' : 'mfp-zoom-in',
     callbacks: {
       open: function () {
         $(".mfp-wrap").attr({ "role": "dialog", "aria-modal": "true", "aria-label": "Image preview" });
+        $(".mfp-close").attr("aria-label", "Close image preview");
       },
       beforeOpen: function () {
+        if (profilePage) this.st.removalDelay = reducedMotion.matches ? 0 : 200;
         // just a hack that adds mfp-anim class to markup
         this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+      },
+      beforeClose: function () {
+        if (profilePage) this.st.removalDelay = reducedMotion.matches ? 0 : 200;
       }
     },
     closeOnContentClick: true,

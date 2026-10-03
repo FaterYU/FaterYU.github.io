@@ -72,12 +72,14 @@ redirect_from:
     <h2 class="profile-section-title" id="publications-heading">Publications</h2>
     {% include profile-scroll-hint.html target="publication-list" %}
   </div>
-  <div class="profile-scroll profile-publication-scroll" id="publication-list" tabindex="0" role="region" aria-label="Publication list">
-    <div class="profile-publication-list">
-      {% assign publications = profile.publications | where_exp: "publication", "publication.hidden != true" | sort: 'sort_month' | reverse %}
-      {% for publication in publications %}
-        {% include profile-publication-card.html publication=publication heading="h3" hide_description=true compact=true %}
-      {% endfor %}
+  <div class="profile-scroll-frame">
+    <div class="profile-scroll profile-publication-scroll" id="publication-list" tabindex="0" role="region" aria-label="Publication list">
+      <div class="profile-publication-list">
+        {% assign publications = profile.publications | where_exp: "publication", "publication.hidden != true" | sort: 'sort_month' | reverse %}
+        {% for publication in publications %}
+          {% include profile-publication-card.html publication=publication heading="h3" hide_description=true compact=true %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
@@ -98,10 +100,14 @@ redirect_from:
   <ul class="profile-record-list profile-internship-list" aria-label="{{ internship.title }}">
     {% for item in internship.items %}
       <li>
-        <div class="profile-organization-logo">
+        <div class="profile-organization-logo{% if item.logo_style %} profile-organization-logo--{{ item.logo_style | escape }}{% endif %}">
           {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="" width="72" height="64" loading="lazy" decoding="async">{% endif %}
         </div>
-        <div>{{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+        <div class="profile-internship-detail">
+          <strong>{{ item.organization }}</strong>
+          <p class="profile-internship-role">{{ item.role }}</p>
+          <p class="profile-internship-meta">{{ item.department }} <span aria-hidden="true">&middot;</span> {{ item.location }}</p>
+        </div>
       </li>
     {% endfor %}
   </ul>

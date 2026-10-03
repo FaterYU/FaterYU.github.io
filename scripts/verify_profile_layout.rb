@@ -53,7 +53,7 @@ sources = YAML.load_file(File.join(root, "images/organizations/sources.yml"))
   verify.call(rows.length == entries.length, "Affiliation entries missing: #{selector}")
   rows.zip(entries).each do |row, entry|
     text = row.text.gsub(/\s+/, " ")
-    %w[title text period detail].each do |key|
+    %w[title text period detail organization role department location].each do |key|
       next unless entry[key]
       verify.call(text.include?(entry[key]), "Affiliation #{key} changed: #{entry.inspect}")
     end
@@ -68,6 +68,27 @@ sources = YAML.load_file(File.join(root, "images/organizations/sources.yml"))
       verify.call(File.file?(asset) && File.size(asset) > 0, "Local logo file missing: #{asset}")
     end
     verify.call(sources.key?(File.basename(path)), "Record official logo source: #{path}")
+    if entry["organization"]
+      detail = row.at_css(".profile-internship-detail")
+      verify.call(detail.at_css("strong").text == entry.fetch("organization"), "Keep organization as the internship heading")
+      verify.call(detail.at_css(".profile-internship-role").text == entry.fetch("role"), "Keep role separate from internship metadata")
+      verify.call(detail.at_css(".profile-internship-meta").text.include?(entry.fetch("location")), "Keep internship location visible")
+    end
+  end
+end
+
+%w[index.html publications/index.html].each do |path|
+  page = Nokogiri::HTML(File.read(File.join(root, "_site", path)))
+  page.css(".profile-scroll").each do |region|
+    verify.call(region.parent["class"] == "profile-scroll-frame", "Scroll edge overlays need an independent frame: #{path}")
+    verify.call(region.parent.css(".profile-scroll").length == 1, "Do not share edge state between lists: #{path}")
+  end
+  page.css(".profile-publication").each do |paper|
+    link = paper.at_css(".profile-publication__media a")
+    next unless link
+    verify.call(link["data-figure-title"] == paper.at_css("h2,h3").text, "Image preview must identify its paper")
+    verify.call(link.at_css(".profile-figure-zoom[aria-hidden='true'] .fa-magnifying-glass-plus"), "Provide a decorative figure zoom affordance")
+    verify.call(link.css("a, button").empty?, "Do not nest interactive controls inside figure links")
   end
 end
 
