@@ -30,18 +30,15 @@ news:
     text: "Serving as a reviewer for **IROS**."
 
 publications:
-  # Sort by first preprint month when available; acceptance does not change order.
-  # These two entries temporarily use the acceptance month until preprint dates are available.
+  # Sort by first preprint month, except the NeurIPS papers use their acceptance month.
   - venue: "NeurIPS 2026"
     sort_month: "2026-09"
     title: "VLAN: Vision-Language Accessible Navigation"
     id: "vlan"
     authors:
       - name: "J. Hu"
-        equal: true
       - name: "Y. Zheng"
         highlight: true
-        equal: true
       - name: "W. Wu"
       - name: "W. Feng"
       - name: "C. Cheng"
@@ -60,9 +57,7 @@ publications:
     authors:
       - name: "Y. Zheng"
         highlight: true
-        equal: true
       - name: "J. Hu"
-        equal: true
       - name: "J. Xiong"
       - name: "R. Liu"
       - name: "J. Zheng"
@@ -73,6 +68,16 @@ publications:
     image_alt: "OccStress overview showing upstream and controlled occupancy corruptions and their propagation through the 4D occupancy forecasting chain"
     featured: true
     links:
+      - label: "Paper"
+        url: "https://arxiv.org/abs/2512.15621"
+      - label: "Website"
+        url: "https://insailab.org/OccStress/"
+      - label: "Code"
+        url: "https://github.com/InSAI-Lab/OccStress"
+      - label: "Dataset"
+        url: "https://huggingface.co/datasets/insailab/OccStress"
+      - label: "Leaderboard"
+        url: "https://insailab.org/OccStress/leaderboard/"
       - label: "Conf. Page"
         url: "https://neurips.cc/virtual/2026/poster/139118"
   - venue: "arXiv 2026"
