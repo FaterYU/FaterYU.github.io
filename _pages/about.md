@@ -20,6 +20,7 @@ redirect_from:
     </div>
   </div>
   <p class="profile-lede">I am a master's student in Electronic Information at Hunan University's School of Artificial Intelligence and Robotics, co-advised by <a href="https://jamycheung.github.io/">Prof. Jiaming Zhang</a> and <a href="https://yangkailun.com/">Prof. Kailun Yang</a>.</p>
+  <p class="profile-lede">I am looking for <strong>internship and Ph.D. opportunities</strong>.</p>
   <ul class="profile-focus-list" aria-label="Research interests">
     {% for interest in profile.research_interests %}
       <li>{{ interest }}</li>
