@@ -8,15 +8,14 @@ research_interests:
 
 news:
   # Preserve the known event date (YYYY-MM or YYYY-MM-DD), independently of preprints.
+  - date: "2026-10-09"
+    text: "One Chinese invention patent granted."
   - date: "2026-09-26"
     text: "Two papers accepted to **NeurIPS 2026**."
   - date: "2026-09"
     text: "One paper accepted to **AACL-IJCNLP 2026**."
   - date: "2026-09"
     text: "Serving as a reviewer for **ICLR**."
-  # Status confirmed in September; the formal grant date is not yet recorded.
-  - date: "2026-09"
-    text: "One Chinese invention patent granted."
   - date: "2026-08-28"
     text: "One Chinese invention patent granted."
   # Use the workshop's published CFP release date for this announcement.
@@ -235,8 +234,11 @@ patents:
         highlight: true
       - name: "J. Gao"
     application_no: "202610729267.7"
+    patent_no: "ZL 2026 1 0729267.7"
+    publication_no: "CN 122281933 B"
     application_date: "May 26, 2026"
     grant_notice_date: "September 8, 2026"
+    granted_date: "October 9, 2026"
     assignee: "杭州旷域智能科技有限公司"
 
   - year: "2026"

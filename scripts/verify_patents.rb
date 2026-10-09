@@ -31,6 +31,9 @@ cards.zip(patents).each do |card, patent|
   cv_item = cv.css(".page__content li").find { |item| item.text.include?(title) }
   verify.call(cv_item && cv_item.text.include?("Inventors: #{names}."), "CV patent inventors differ from data")
   verify.call(cv_item.css("strong").map(&:text).include?("Y. Zheng"), "CV should emphasize Y. Zheng")
+  if patent["granted_date"]
+    verify.call(cv_item.text.include?("granted #{patent.fetch('granted_date')}"), "CV grant date differs from data")
+  end
   numbers = %w[application_no patent_no publication_no].filter_map { |key| patent[key] }
   verify.call(numbers.any?, "Keep patent identifiers in the source data")
   numbers.each do |number|
