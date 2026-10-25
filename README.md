@@ -13,9 +13,9 @@ All entries remain in a compact, vertically scrollable list. An empty list hides
 the section. For an in-page paper link such as `#occstress`, use the matching
 publication's `id`.
 
-Publication lists on the homepage and Publications page also scroll within a
-viewport-relative height. Both lists are keyboard-focusable and fully expanded
-when printing. Height limits live in `_sass/layout/_profile.scss`.
+Publication lists on the homepage and Publications page display all visible
+papers in normal page flow. Only News uses an internal scroll area; its height
+limit lives in `_sass/layout/_profile.scss`.
 
 Build with `bundle exec jekyll build`, then run `bundle exec ruby scripts/verify_news.rb`
 to check the news rendering and publication links.
@@ -23,14 +23,38 @@ to check the news rendering and publication links.
 ## Homepage Presentation
 
 Internship entries in `_data/profile.yml` use `organization`, `role`,
-`department`, `location`, and `logo`. Use `logo_style: "emblem"` for a compact
-square mark; wordmarks use the full logo slot. Keep unknown dates omitted.
+`department`, `location`, and `logo`, with an optional `period` such as
+`Oct 2026 - Present`. Use `logo_style: "emblem"` for a compact square mark;
+wordmarks use the full logo slot. Keep unknown dates and locations omitted,
+and mirror dated internship entries in `_pages/cv.md`.
 
 After changing homepage interactions, run `npm run build:js`, build Jekyll, then
 run `node scripts/verify_profile_interactions.cjs` and
 `bundle exec ruby scripts/verify_profile_layout.rb`. Scroll edge fades and figure
 previews respect reduced-motion preferences. Edge fades and zoom icons are hidden
 when printing.
+
+## Gallery
+
+The Gallery page uses `_data/gallery.yml`, with events listed newest first.
+Each event has a unique `id`, `title`, a short `description` with optional Markdown
+links, optional `date` (`"YYYY-MM-DD"`) and `location`, and a `photos` list. The
+description, date, and location appear below the photos. An empty photo list
+shows "Photos coming soon." without broken
+images or demo photos. Keep Projects in `_data/navigation.yml` commented out
+until its content is ready; the existing `/projects/` page remains available.
+
+Put event photos under `images/gallery/<event-id>/`, then add entries such as:
+
+```yaml
+photos:
+  - src: "/images/gallery/ubicomp-2026/group.jpg"
+    alt: "Workshop participants at UbiComp 2026"
+    caption: "AAA workshop, UbiComp 2026."
+```
+
+Photos use the existing full-size image preview and preserve their proportions.
+After building Jekyll, run `bundle exec ruby scripts/verify_gallery.rb`.
 
 ## Visitor Statistics
 

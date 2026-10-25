@@ -1,0 +1,17 @@
+---
+layout: single
+title: "Gallery"
+description: "Conferences, workshops, and academic events with Yu Zheng."
+permalink: /gallery/
+author_profile: true
+profile_layout: true
+hide_title: true
+---
+
+<section class="profile-page-heading">
+  <h1>Gallery</h1>
+</section>
+
+{% for event in site.data.gallery.events %}
+  {% include profile-gallery-event.html event=event %}
+{% endfor %}

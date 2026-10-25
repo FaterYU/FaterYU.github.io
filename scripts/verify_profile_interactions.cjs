@@ -17,7 +17,7 @@ function setup({ profile = true, reduced = false, withFrame = true } = {}) {
   const observers = [];
   const motion = { matches: reduced, addEventListener() {} };
   const scroll = {
-    id: "publication-list", dataset: {}, scrollTop: 0, scrollHeight: 900, clientHeight: 500,
+    id: "news-list", dataset: {}, scrollTop: 0, scrollHeight: 900, clientHeight: 500,
     firstElementChild: {},
     closest: () => withFrame ? frame : null,
     addEventListener: (name, callback) => { events[name] = callback; }

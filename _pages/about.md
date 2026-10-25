@@ -20,6 +20,7 @@ redirect_from:
     </div>
   </div>
   <p class="profile-lede">I am a master's student in Electronic Information at Hunan University's School of Artificial Intelligence and Robotics, co-advised by <a href="https://jamycheung.github.io/">Prof. Jiaming Zhang</a> and <a href="https://yangkailun.com/">Prof. Kailun Yang</a>.</p>
+  <p class="profile-lede">I am currently an Algorithm Intern at Horizon Robotics Research Institute's Robotics Lab, working on humanoid robotics.</p>
   <p class="profile-lede">I am looking for <strong>internship and Ph.D. opportunities</strong>.</p>
   <ul class="profile-focus-list" aria-label="Research interests">
     {% for interest in profile.research_interests %}
@@ -69,19 +70,12 @@ redirect_from:
 </section>
 
 <section class="profile-section profile-section--publications" id="publications" tabindex="-1" aria-labelledby="publications-heading">
-  <div class="profile-scroll-heading">
-    <h2 class="profile-section-title" id="publications-heading">Publications</h2>
-    {% include profile-scroll-hint.html target="publication-list" %}
-  </div>
-  <div class="profile-scroll-frame">
-    <div class="profile-scroll profile-publication-scroll" id="publication-list" tabindex="0" role="region" aria-label="Publication list">
-      <div class="profile-publication-list">
-        {% assign publications = profile.publications | where_exp: "publication", "publication.hidden != true" | sort: 'sort_month' | reverse %}
-        {% for publication in publications %}
-          {% include profile-publication-card.html publication=publication heading="h3" hide_description=true compact=true %}
-        {% endfor %}
-      </div>
-    </div>
+  <h2 class="profile-section-title" id="publications-heading">Publications</h2>
+  <div class="profile-publication-list" id="publication-list">
+    {% assign publications = profile.publications | where_exp: "publication", "publication.hidden != true" | sort: 'sort_month' | reverse %}
+    {% for publication in publications %}
+      {% include profile-publication-card.html publication=publication heading="h3" hide_description=true compact=true %}
+    {% endfor %}
   </div>
 </section>
 
@@ -107,7 +101,10 @@ redirect_from:
         <div class="profile-internship-detail">
           <strong>{{ item.organization }}</strong>
           <p class="profile-internship-role">{{ item.role }}</p>
-          <p class="profile-internship-meta">{{ item.department }} <span aria-hidden="true">&middot;</span> {{ item.location }}</p>
+          {% if item.department or item.location %}
+            <p class="profile-internship-meta">{{ item.department }}{% if item.department and item.location %} <span aria-hidden="true">&middot;</span> {% endif %}{{ item.location }}</p>
+          {% endif %}
+          {% if item.period %}<p class="profile-internship-meta">{{ item.period }}</p>{% endif %}
         </div>
       </li>
     {% endfor %}

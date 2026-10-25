@@ -1,0 +1,12 @@
+# List events newest first. Add photos with src, alt, and an optional caption.
+events:
+  - id: "ubicomp-2026"
+    title: "UbiComp 2026"
+    description: "We organized the [Assistive Agents for All (AAA) workshop](https://insailab.org/ubicomp2026-aaa-workshop/) at UbiComp 2026."
+    date: "2026-10-11"
+    location: "Shanghai, China"
+    photos:
+      - src: "/images/gallery/ubicomp-2026/conference-group.jpg"
+        alt: "Three participants in front of the UbiComp / ISWC 2026 conference backdrop"
+        width: 1084
+        height: 726

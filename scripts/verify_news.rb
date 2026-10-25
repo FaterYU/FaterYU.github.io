@@ -33,8 +33,11 @@ verify.call(home.css(".profile-section-title").map(&:text).take(3) == ["News", "
 
 %w[index.html publications/index.html].each do |path|
   page = Nokogiri::HTML(File.read(File.join(root, "_site", path)))
-  scroll = page.at_css(".profile-publication-scroll[tabindex='0'][role='region'][aria-label='Publication list']")
-  verify.call(scroll, "Missing keyboard-accessible publication scroll area: #{path}")
+  list = page.at_css("#publication-list.profile-publication-list")
+  verify.call(list, "Missing expanded publication list: #{path}")
+  verify.call(page.css("#publication-list").length == 1, "Publication list needs a unique identifier: #{path}")
+  verify.call(page.css(".profile-publication-scroll, .profile-scroll-hint[data-scroll-target='publication-list']").empty?, "Publications must not have an internal scroll area or indicator: #{path}")
+  verify.call(list.ancestors(".profile-scroll, .profile-scroll-frame").empty? && !list.key?("tabindex"), "Publications must remain in normal page flow: #{path}")
   page.css(".profile-scroll").each do |region|
     id = region["id"]
     verify.call(id && page.css("[id='#{id}']").length == 1, "Scroll region needs a unique identifier: #{path}")
@@ -47,8 +50,8 @@ verify.call(home.css(".profile-section-title").map(&:text).take(3) == ["News", "
     verify.call(hint.at_css(".fa-arrows-up-down"), "Scroll indicator must use the existing icon set")
   end
   publications = profile.fetch("publications").reject { |paper| paper["hidden"] == true }.sort_by { |paper| paper.fetch("sort_month") }.reverse
-  verify.call(scroll.css(".profile-publication h2, .profile-publication h3").map(&:text) == publications.map { |paper| paper.fetch("title") }, "Scrolling must retain all visible publications in order: #{path}")
-  scroll.css(".profile-publication").zip(publications).each do |card, paper|
+  verify.call(list.css(".profile-publication h2, .profile-publication h3").map(&:text) == publications.map { |paper| paper.fetch("title") }, "Show all visible publications in order: #{path}")
+  list.css(".profile-publication").zip(publications).each do |card, paper|
     verify.call(card.css(".profile-publication__meta a").empty?, "Venue labels must remain plain text: #{path}")
     verify.call(card.at_css(".profile-publication__meta").text == paper.fetch("venue"), "Venue label changed: #{path}")
     verify.call(card.css(".profile-link-row a").map { |link| [link.text, link["href"]] } == paper.fetch("links", []).map { |link| [link.fetch("label"), link.fetch("url")] }, "Paper and conference links must stay in the resource row: #{path}")

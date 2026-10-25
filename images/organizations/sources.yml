@@ -1,5 +1,9 @@
 # Official assets used to identify educational and internship affiliations.
 # Logos remain the property of their respective organizations.
+horizon-robotics.png:
+  page: https://www.horizon.auto/
+  source: https://www.horizon.auto/favicon.png
+  note: Official 256px square mark converted from ICO to PNG without visual changes.
 hunan-university.png:
   page: https://100.hnu.edu.cn/bsxz1/bsxz.htm
   source: https://100.hnu.edu.cn/bsxz/xiaohui.zip

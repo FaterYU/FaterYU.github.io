@@ -8,6 +8,8 @@ research_interests:
 
 news:
   # Preserve the known event date (YYYY-MM or YYYY-MM-DD), independently of preprints.
+  - date: "2026-10-19"
+    text: "Joined **Horizon Robotics** as an Algorithm Intern in the Robotics Lab, Research Institute."
   - date: "2026-10-09"
     text: "One Chinese invention patent granted."
   - date: "2026-09-26"
@@ -200,6 +202,12 @@ internships:
   meta: "Industry and Research"
   title: "Internship experience"
   items:
+    - organization: "Horizon Robotics"
+      role: "Algorithm Intern"
+      department: "Robotics Lab, Research Institute"
+      location: "Beijing, China"
+      logo: "/images/organizations/horizon-robotics.png"
+      logo_style: "emblem"
     - organization: "PolyU"
       role: "Research Intern"
       department: "Dept. PAIR"

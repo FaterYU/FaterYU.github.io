@@ -9,7 +9,7 @@ verify = lambda do |condition, message|
   checks += 1
 end
 
-%w[index.html publications/index.html cv/index.html projects/index.html].each do |path|
+%w[index.html publications/index.html cv/index.html projects/index.html gallery/index.html].each do |path|
   page = Nokogiri::HTML(File.read(File.join(root, "_site", path)))
   verify.call(page.css("h1").length == 1, "Missing or duplicated page identity: #{path}")
   verify.call(page.at_css(".author__avatar img[alt]"), "Sidebar portrait missing: #{path}")
@@ -44,6 +44,7 @@ end
 
 profile = YAML.load_file(File.join(root, "_data/profile.yml"))
 home = Nokogiri::HTML(File.read(File.join(root, "_site/index.html")))
+cv = Nokogiri::HTML(File.read(File.join(root, "_site/cv/index.html")))
 sources = YAML.load_file(File.join(root, "images/organizations/sources.yml"))
 {
   "#education .profile-timeline > li" => profile.fetch("education"),
@@ -72,7 +73,13 @@ sources = YAML.load_file(File.join(root, "images/organizations/sources.yml"))
       detail = row.at_css(".profile-internship-detail")
       verify.call(detail.at_css("strong").text == entry.fetch("organization"), "Keep organization as the internship heading")
       verify.call(detail.at_css(".profile-internship-role").text == entry.fetch("role"), "Keep role separate from internship metadata")
-      verify.call(detail.at_css(".profile-internship-meta").text.include?(entry.fetch("location")), "Keep internship location visible")
+      metadata = detail.at_css(".profile-internship-meta").text.gsub(/\s+/, " ").strip
+      expected_metadata = [entry["department"], entry["location"]].compact.join(" \u00b7 ")
+      verify.call(metadata == expected_metadata, "Show known internship metadata without dangling separators")
+      if entry["period"]
+        cv_item = cv.css(".page__content li").find { |item| item.text.include?(entry.fetch("organization")) }
+        verify.call(cv_item && cv_item.text.include?(entry.fetch("period")), "CV internship dates differ from data")
+      end
     end
   end
 end

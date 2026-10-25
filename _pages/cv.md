@@ -37,6 +37,7 @@ redirect_from:
 
 ## Internship
 
+- Algorithm Intern, Robotics Lab, Research Institute, Horizon Robotics, Beijing, China
 - Research Intern, Dept. PAIR, PolyU, Hong Kong, China
 - Interface Development Intern, Dept. TEG, Tencent, Shenzhen, China
 - Assistant Tutor, Dept. RoboMaster, DJI, Shenzhen, China

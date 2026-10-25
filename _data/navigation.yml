@@ -11,8 +11,12 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Projects"
-    url: /projects/
+  # Projects is temporarily hidden while its content is being organized.
+  # - title: "Projects"
+  #   url: /projects/
+
+  - title: "Gallery"
+    url: /gallery/
 
   - title: "CV"
     url: /cv/

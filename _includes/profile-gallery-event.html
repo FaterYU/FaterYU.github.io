@@ -1,0 +1,38 @@
+<section class="profile-gallery-event" id="{{ include.event.id | escape }}" aria-labelledby="{{ include.event.id | escape }}-heading">
+  <header class="profile-gallery-event__header">
+    <h2 id="{{ include.event.id | escape }}-heading">{{ include.event.title | escape }}</h2>
+  </header>
+  {% if include.event.photos.size > 0 %}
+    <div class="profile-gallery-photos">
+      {% for photo in include.event.photos %}
+        <figure class="profile-gallery-photo">
+          <a class="image-popup" href="{{ photo.src | relative_url }}" aria-label="View photo: {{ photo.alt | escape }}" title="View photo" data-figure-title="{{ photo.caption | default: photo.alt | escape }}">
+            <img src="{{ photo.src | relative_url }}" alt="{{ photo.alt | escape }}"{% if photo.width and photo.height %} width="{{ photo.width }}" height="{{ photo.height }}"{% endif %} loading="lazy" decoding="async">
+            <span class="profile-figure-zoom" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </a>
+          {% if photo.caption %}<figcaption>{{ photo.caption | escape }}</figcaption>{% endif %}
+        </figure>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="profile-gallery-empty">
+      <i class="fa-solid fa-camera" aria-hidden="true"></i>
+      <p>Photos coming soon.</p>
+    </div>
+  {% endif %}
+  {% if include.event.description or include.event.date or include.event.location %}
+    <div class="profile-gallery-event__details">
+      {% if include.event.description %}{{ include.event.description | markdownify }}{% endif %}
+      {% if include.event.date or include.event.location %}
+        <ul class="profile-gallery-event__meta" aria-label="Event details">
+          {% if include.event.date %}
+            <li><i class="fa-solid fa-calendar-days" aria-hidden="true"></i><time datetime="{{ include.event.date | escape }}">{{ include.event.date | date: "%B %-d, %Y" }}</time></li>
+          {% endif %}
+          {% if include.event.location %}
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>{{ include.event.location | escape }}</span></li>
+          {% endif %}
+        </ul>
+      {% endif %}
+    </div>
+  {% endif %}
+</section>
