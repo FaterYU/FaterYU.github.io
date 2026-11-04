@@ -8,6 +8,8 @@ research_interests:
 
 news:
   # Preserve the known event date (YYYY-MM or YYYY-MM-DD), independently of preprints.
+  - date: "2026-11-03"
+    text: "Serving as a reviewer for **ICRA**, **ICASSP**, and **IEEE OJSP**."
   - date: "2026-10-19"
     text: "Joined **Horizon Robotics** as an Algorithm Intern in the Robotics Lab, Research Institute."
   - date: "2026-10-09"
