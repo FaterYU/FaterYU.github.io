@@ -34,6 +34,27 @@ news:
 
 publications:
   # Sort by first preprint month, except the NeurIPS papers use their acceptance month.
+  - venue: "arXiv 2026"
+    sort_month: "2026-10"
+    title: "Rethinking One Gene, One Token: Transcriptome-Aware Tokenization for Single-Cell Foundation Models"
+    id: "sctat"
+    authors:
+      - name: "J. Xiong"
+        equal: true
+      - name: "J. Li"
+        equal: true
+      - name: "Y. Zheng"
+        highlight: true
+      - name: "X. Zhou"
+      - name: "Z. Wang"
+      - name: "X. Hu"
+      - name: "J. Qi"
+        corresponding: true
+    image: "/images/publications/sctat-overview.png"
+    image_alt: "Overview of scTAT showing gene-set vocabulary construction, transcriptome-aware tokenization, and gene reconstruction"
+    links:
+      - label: "Paper"
+        url: "https://arxiv.org/abs/2611.05410"
   - venue: "NeurIPS 2026"
     sort_month: "2026-09"
     title: "VLAN: Vision-Language Accessible Navigation"
@@ -78,7 +99,7 @@ publications:
       - label: "Code"
         url: "https://github.com/InSAI-Lab/OccStress"
       - label: "Dataset"
-        url: "https://huggingface.co/datasets/insailab/OccStress"
+        url: "https://huggingface.co/datasets/InSAI-Lab/OccStress"
       - label: "Leaderboard"
         url: "https://insailab.org/OccStress/leaderboard/"
       - label: "Conf. Page"
