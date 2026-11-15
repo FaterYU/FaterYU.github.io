@@ -31,7 +31,7 @@ redirect_from:
 
 ## Professional Activities
 
-- Conference reviewer for ICLR, IROS, ICRA, and ICASSP.
+- Conference reviewer for ICLR, CVPR, ICRA, IROS, and ICASSP.
 - Journal reviewer for IEEE RA-L and IEEE OJSP.
 - Workshop organizer, **Assistive Agents for All**, UbiComp 2026. [[website]](https://insailab.org/ubicomp2026-aaa-workshop/)
 

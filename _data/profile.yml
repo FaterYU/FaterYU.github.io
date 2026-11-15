@@ -8,6 +8,8 @@ research_interests:
 
 news:
   # Preserve the known event date (YYYY-MM or YYYY-MM-DD), independently of preprints.
+  - date: "2026-11"
+    text: "Serving as a reviewer for **CVPR**."
   - date: "2026-11-03"
     text: "Serving as a reviewer for **ICRA**, **ICASSP**, and **IEEE OJSP**."
   - date: "2026-10-19"
@@ -217,7 +219,7 @@ professional_activities:
   meta: "Academic Service"
   title: "Reviewer and workshop organizer"
   items:
-    - "Conference reviewer for **ICLR**, **IROS**, **ICRA**, and **ICASSP**."
+    - "Conference reviewer for **ICLR**, **CVPR**, **ICRA**, **IROS**, and **ICASSP**."
     - "Journal reviewer for **IEEE RA-L** and **IEEE OJSP**."
     - "Organizer of the **UbiComp 2026** workshop [Assistive Agents for All](https://insailab.org/ubicomp2026-aaa-workshop/)."
 
