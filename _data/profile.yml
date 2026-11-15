@@ -8,7 +8,7 @@ research_interests:
 
 news:
   # Preserve the known event date (YYYY-MM or YYYY-MM-DD), independently of preprints.
-  - date: "2026-11"
+  - date: "2026-11-15"
     text: "Serving as a reviewer for **CVPR**."
   - date: "2026-11-03"
     text: "Serving as a reviewer for **ICRA**, **ICASSP**, and **IEEE OJSP**."
