@@ -74,6 +74,12 @@ publications:
     image_alt: "VLAN overview showing accessible navigation paths and obstacle accessibility across different users and robots"
     featured: true
     links:
+      - label: "Paper"
+        url: "https://arxiv.org/abs/2611.18346v1"
+      - label: "Code"
+        url: "https://github.com/InSAI-Lab/VLAN"
+      - label: "Dataset"
+        url: "https://huggingface.co/datasets/InSAI-Lab/VLAN"
       - label: "Conf. Page"
         url: "https://neurips.cc/virtual/2026/poster/138986"
   - venue: "NeurIPS 2026"
