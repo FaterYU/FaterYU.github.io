@@ -37,6 +37,36 @@ news:
 publications:
   # Sort by first preprint month, except the NeurIPS papers use their acceptance month.
   - venue: "arXiv 2026"
+    sort_month: "2026-11"
+    title: "GOLD-SLAM: Gaussian-splatting Omnidirectional LiDAR-Depth SLAM"
+    id: "gold-slam"
+    authors:
+      - name: "W. Zhang"
+      - name: "Y. Huang"
+      - name: "Y. Zheng"
+        highlight: true
+      - name: "L. Chenxiao"
+      - name: "Y. Li"
+      - name: "L. Fan"
+      - name: "L. Zhuang"
+        corresponding: true
+      - name: "Y. Chen"
+      - name: "R. Liu"
+      - name: "J. Zheng"
+      - name: "J. Zhang"
+        corresponding: true
+    image: "/images/publications/gold-slam-overview.png"
+    image_alt: "GOLD-SLAM tracking and mapping pipeline with panoramic camera, LiDAR and IMU inputs"
+    links:
+      - label: "Paper"
+        url: "https://arxiv.org/abs/2611.32335"
+      - label: "Website"
+        url: "https://insailab.org/GOLD-SLAM"
+      - label: "Code"
+        url: "https://github.com/InSAI-Lab/GOLD-SLAM"
+      - label: "Dataset"
+        url: "https://huggingface.co/datasets/InSAI-Lab/WHOLE"
+  - venue: "arXiv 2026"
     sort_month: "2026-10"
     title: "Rethinking One Gene, One Token: Transcriptome-Aware Tokenization for Single-Cell Foundation Models"
     id: "sctat"
